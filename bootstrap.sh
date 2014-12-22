@@ -10,11 +10,15 @@ source homebrew.sh
 source symlinks.sh
 
 # Personalize Git Configuration
-echo -n "Commit Author: " && read author
-echo -n "Commit Email: " && read email
-git config --global user.name "$author"
-git config --global user.email "$email"
 git config --global core.excludesfile "$PWD/.gitignore"
+if ! grep -q "name =" "$PWD/.gitconfig"; then
+    echo -n "Commit Author: " && read author
+    git config --global user.name "$author"
+fi
+if ! grep -q "email =" "$PWD/.gitconfig"; then
+    echo -n "Commit Email: " && read email
+    git config --global user.email "$email"
+fi
 
 # Change the Default Login Shell
 if [ "$SHELL" != "$(which fish)" ]; then
