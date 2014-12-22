@@ -1,0 +1,17 @@
+[alias]
+    tree = log -n 25 --abbrev-commit --graph --pretty=oneline
+    amend = commit --amend --reuse-message=HEAD
+[core]
+    editor = subl
+    autocrlf = input
+    trustctime = false
+[color "status"]
+    changed = yellow
+    added = green
+    untracked = red
+[credential]
+    helper = osxkeychain
+[help]
+    autocorrect = 50
+[push]
+    default = simple
