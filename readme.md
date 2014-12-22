@@ -1,13 +1,18 @@
 # [Periwinkle](https://github.com/Polytonic/Periwinkle)
 [![OSX Version](http://img.shields.io/badge/OSX-Yosemite-brightgreen.svg?style=flat-square)](https://www.apple.com/osx/)
+
 ## Summary
-Periwinkle is a collection of scripts and configuration files to setup an OSX computer for development, loosely based on [thoughtbot/laptop](https://github.com/thoughtbot/laptop) and [other dotfiles](http://dotfiles.github.io/). The script can safely run multiple times, where subsequent runs will upgrade existing packages and fix any broken symbolic links.
+Periwinkle is a collection of scripts and configuration files to setup an OSX computer for development, loosely based on [thoughtbot/laptop](https://github.com/thoughtbot/laptop) and [other dotfiles](http://dotfiles.github.io/). The script can safely run multiple times, where subsequent runs will upgrade existing packages and fix broken links.
+
 ## Getting Started
 Periwinkle requires [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) or the [Xcode Command Line Tools](https://developer.apple.com/library/ios/technotes/tn2339/_index.html). Once `git` is available, clone this repository and run the bootstrapping script.
+
 ```bash
 git clone https://github.com/Polytonic/Periwinkle.git
 cd Periwinkle && source bootstrap.sh
 ```
+
+To update, simply run `bash bootstrap.sh` or `./bootstrap.sh`.
 
 ## Documentation
 
