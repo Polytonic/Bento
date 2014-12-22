@@ -17,7 +17,6 @@ git config --global user.email "$email"
 git config --global core.excludesfile "$PWD/.gitignore"
 
 # Change the Default Login Shell
-fish -c fish_update_completions
 if [ "$SHELL" != "$(which fish)" ]; then
     if ! grep -q "$(which fish)" "/etc/shells"; then
         which fish | sudo tee -a /etc/shells > /dev/null
