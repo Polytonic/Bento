@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Request Permission Upfront
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 export PATH="/usr/local/sbin:$PATH"
