@@ -22,7 +22,7 @@ if [ "$SHELL" != "$(which fish)" ]; then
         which fish | sudo tee -a /etc/shells > /dev/null
     fi
     echo "Changing Login Shell ..."
-    sudo chsh -s "$(which fish)"
+    chsh -s "$(which fish)"
 fi
 
 # Notify the User
