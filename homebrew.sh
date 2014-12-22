@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Install Homebrew
 if test ! "$(which brew)"; then
     echo "Installing Homebrew"
