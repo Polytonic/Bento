@@ -43,6 +43,7 @@ apps=(
     istat-menus
     kaleidoscope
     launchrocket
+    league-of-legends
     qlcolorcode
     qlmarkdown
     qlstephen
@@ -60,3 +61,10 @@ echo "Cleaning Up Homebrew ..."
 brew upgrade
 brew prune
 brew cleanup
+
+# Download Thin-Client Installers
+echo "Downloading Extras ..."
+cd ~/Desktop
+curl -O https://ccmdls.adobe.com/AdobeProducts/KCCC/1/osx10/CreativeCloudInstaller.dmg \
+     -O http://dist.blizzard.com/downloads/bna-installers/322d5bb9ae0318de3d4cde7641c96425/retail.1/Battle.net-Setup-enUS.zip
+cd -
