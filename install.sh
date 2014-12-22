@@ -54,7 +54,7 @@ apps=(
     transmission
     vlc
 )
-brew cask install --appdir="/Applications" "${apps[@]}"
+brew cask install "${apps[@]}"
 
 # Cleanup Homebrew
 brew prune
