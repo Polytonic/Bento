@@ -57,6 +57,7 @@ apps=(
 brew cask install "${apps[@]}"
 
 # Cleanup Homebrew
+echo "Cleaning Up Homebrew ..."
 brew prune
 brew cleanup
 
@@ -65,7 +66,7 @@ if [ "$SHELL" != "$(which fish)" ]; then
     if ! grep -q "$(which fish)" "/etc/shells"; then
         "$(which fish)" | sudo tee -a /etc/shells > /dev/null
     fi
-    echo "Changing Login Shell"
+    echo "Changing Login Shell ..."
     sudo chsh -s $(which fish)
 fi
 echo "Installation Complete!"
