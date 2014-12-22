@@ -57,5 +57,6 @@ brew cask install "${apps[@]}"
 
 # Cleanup Homebrew
 echo "Cleaning Up Homebrew ..."
+brew upgrade
 brew prune
 brew cleanup
