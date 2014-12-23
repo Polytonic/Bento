@@ -30,3 +30,23 @@ function fish_prompt
     set_color    white;     echo -e "🍣  "
 
 end
+
+# Show Hidden Files and Extensions
+function showhidden
+
+    if [ $argv[1] = "true" ]
+
+        defaults write com.apple.finder AppleShowAllFiles -bool $argv[1]
+        defaults write NSGlobalDomain AppleShowAllExtensions -bool $argv[1]
+        killall Finder
+
+    else if [ $argv[1] = "false" ]
+
+        defaults write com.apple.finder AppleShowAllFiles -bool $argv[1]
+        defaults write NSGlobalDomain AppleShowAllExtensions -bool $argv[1]
+        killall Finder
+
+    else; echo "Invalid Option."
+    end
+
+end
