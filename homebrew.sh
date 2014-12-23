@@ -51,6 +51,7 @@ apps=(
     skype
     steam
     sublime-text3
+    tinkertool
     tower
     transmission
     vlc
