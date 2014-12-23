@@ -8,6 +8,7 @@ Periwinkle is a collection of scripts and configuration files to setup an OSX co
 Periwinkle requires [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) or the [Xcode Command Line Tools](https://developer.apple.com/library/ios/technotes/tn2339/_index.html). Once `git` is available, clone this repository and run the bootstrapping script.
 
 ```bash
+xcode-select --install
 git clone https://github.com/Polytonic/Periwinkle.git
 cd Periwinkle && source bootstrap.sh
 ```
