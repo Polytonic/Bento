@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Install Homebrew
+export PATH="/usr/local/sbin:$PATH"
 if test ! "$(which brew)"; then
     echo "Installing Homebrew"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -55,6 +56,13 @@ apps=(
     vlc
 )
 brew cask install "${apps[@]}"
+
+echo "Installing Fonts"
+brew tap caskroom/fonts
+fonts=(
+    font-fira-sans
+)
+brew cask install "${fonts[@]}"
 
 # Cleanup Homebrew
 echo "Cleaning Up Homebrew ..."
