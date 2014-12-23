@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Secondary Scripts
+source macosx.sh
 source homebrew.sh
 source symlinks.sh
 
@@ -27,3 +28,5 @@ fi
 # Notify the User
 echo "Installation Complete!"
 echo "Note: some changes may require a restart in order to take effect."
+echo "This terminal will self-destruct in five seconds. Good luck $USER."
+sleep 5; killall "Terminal";
