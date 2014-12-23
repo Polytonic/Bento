@@ -13,7 +13,7 @@ git clone https://github.com/Polytonic/Periwinkle.git
 cd Periwinkle && source bootstrap.sh
 ```
 
-To update, simply run `bash bootstrap.sh` or `./bootstrap.sh`.
+To update, simply run `bash bootstrap.sh`, or `./bootstrap.sh` if running `fish`.
 
 ## Documentation
 Periwinkle is currently configured to use the [fish](http://fishshell.com/) shell. The standard prompt will expand onto a second line and display additional information when it detects that the current directory is a git repository. On first run, you should be prompted to enter your git credentials. For simplicity, the global `.gitignore` is shared with the `.gitignore` of this repository.
