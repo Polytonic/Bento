@@ -15,7 +15,7 @@ cd Periwinkle && source bootstrap.sh
 To update, simply run `bash bootstrap.sh` or `./bootstrap.sh`.
 
 ## Documentation
-Periwinkle is configured to use the [fish](http://fishshell.com/) shell. On first run, you should be prompted for your git credentials. Sublime Text is the editor of choice. Don't forget to install a terminal theme! At some point I'll add OSX defaults configuration and figure out how to automate ST3 package installation ...
+Periwinkle is configured to use the [fish](http://fishshell.com/) shell. On first run, you should be prompted for your git credentials. Periwinkle uses a modified version of [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme/). Sublime Text is the editor of choice. At some point I'll add OSX defaults configuration and figure out how to automate ST3 package installation ...
 
 ## License
 >The MIT License (MIT)
