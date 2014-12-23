@@ -15,7 +15,7 @@ cd Periwinkle && source bootstrap.sh
 To update, simply run `bash bootstrap.sh` or `./bootstrap.sh`.
 
 ## Documentation
-Periwinkle is configured to use the [fish](http://fishshell.com/) shell. On first run, you should be prompted for your git credentials. Periwinkle uses a modified version of [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme/). Sublime Text is the editor of choice. ... the gitignore for this repository is used as a global ignore file
+Periwinkle is currently configured to use the [fish](http://fishshell.com/) shell. The standard prompt will expand onto a second line and display additional information when it detects that the current directory is a git repository. On first run, you should be prompted to enter your git credentials. For simplicity, the global `.gitignore` is shared with the `.gitignore` of this repository. The installation process handles a significant portion of the work involved with setting up the machine, but is incomplete in some regards. You will need to manually open Sublime Text and wait for it to finish downloading packages, as well as browse through System Preferences to set any remaining options inaccessible through defaults. Periwinkle uses a modified version of [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme/).
 
 ## License
 >The MIT License (MIT)

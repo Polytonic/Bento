@@ -25,6 +25,7 @@ binaries=(
     git
     git-extras
     grc
+    shellcheck
     terminal-notifier
     tig
 )

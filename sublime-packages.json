@@ -1,0 +1,15 @@
+{
+	"installed_packages":
+	[
+		"GitGutter",
+		"Markdown Extended",
+		"Origami",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-shellcheck",
+		"SublimeREPL",
+		"TabsExtra",
+		"Theme - Spacegray",
+		"Tomorrow Color Schemes"
+	]
+}
