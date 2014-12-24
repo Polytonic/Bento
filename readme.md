@@ -1,5 +1,5 @@
 # [Periwinkle](https://github.com/Polytonic/Periwinkle)
-[![OSX Version](http://img.shields.io/badge/OSX-Yosemite-brightgreen.svg?style=flat-square)](https://www.apple.com/osx/)
+![Screenshot](http://i.imgur.com/lf0dzNE.png)
 
 ## Summary
 Periwinkle is a collection of scripts and configuration files to setup an OSX computer for development, loosely based on [thoughtbot/laptop](https://github.com/thoughtbot/laptop) and [other dotfiles](http://dotfiles.github.io/). The script can safely run multiple times, where subsequent runs will upgrade existing packages and fix broken links.
