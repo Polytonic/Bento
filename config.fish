@@ -1,5 +1,5 @@
 # Define Paths
-set HOMEBREW /usr/local/sbin
+set HOMEBREW /usr/local/bin /usr/local/sbin
 set -gx PATH $HOMEBREW $PATH
 set -gx fish_greeting (set_color magenta)(date +"%A, %B %d, %Y at %r (%Z)")
 
