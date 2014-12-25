@@ -10,6 +10,8 @@ fi
 # Update Homebrew
 echo "Checking for Updates ..."
 brew doctor
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
 brew update
 
 # Install Command Line Binaries
@@ -33,8 +35,6 @@ brew install "${binaries[@]}"
 
 # Install Application Binaries
 echo "Installing Applications ..."
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
 apps=(
     bartender
     codekit

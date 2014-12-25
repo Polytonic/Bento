@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
+# Request Permission Upfront
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+export PATH="/usr/local/sbin:$PATH"
+
 # Secondary Scripts
-source macosx.sh
 source homebrew.sh
 source symlinks.sh
 
@@ -29,4 +33,5 @@ fi
 echo "Installation Complete!"
 echo "Note: some changes may require a restart in order to take effect."
 echo "This terminal will self-destruct in five seconds. Good luck $USER."
+source macosx.sh
 sleep 5; killall "Terminal";
