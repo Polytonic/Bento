@@ -14,25 +14,6 @@ brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew update
 
-# Install Command Line Binaries
-echo "Installing Binaries ..."
-binaries=(
-    fish
-    flac
-    hub
-    node
-    pypy
-    python
-    python3
-    git
-    git-extras
-    grc
-    shellcheck
-    terminal-notifier
-    tig
-)
-brew install "${binaries[@]}"
-
 # Install Application Binaries
 echo "Installing Applications ..."
 apps=(
@@ -59,6 +40,27 @@ apps=(
 )
 brew cask install "${apps[@]}"
 
+# Install Command Line Binaries
+echo "Installing Binaries ..."
+binaries=(
+    fish
+    flac
+    hub
+    imagemagick
+    node
+    pypy
+    python
+    python3
+    git
+    git-extras
+    shellcheck
+    terminal-notifier
+    tig
+    xquartz
+)
+brew install "${binaries[@]}"
+
+# Install Custom Fonts
 echo "Installing Fonts"
 brew tap caskroom/fonts
 fonts=(
