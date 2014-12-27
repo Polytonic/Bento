@@ -56,7 +56,6 @@ binaries=(
     shellcheck
     terminal-notifier
     tig
-    xquartz
 )
 brew install "${binaries[@]}"
 
