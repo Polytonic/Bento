@@ -72,6 +72,7 @@ echo "Cleaning Up Homebrew ..."
 brew upgrade
 brew prune
 brew cleanup
+brew cask cleanup
 
 # Download Thin-Client Installers
 echo "Downloading Extras ..."
