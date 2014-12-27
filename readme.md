@@ -10,7 +10,7 @@ Periwinkle requires [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) o
 ```bash
 xcode-select --install
 git clone https://github.com/Polytonic/Periwinkle.git
-cd Periwinkle && source bootstrap.sh
+cd Periwinkle && caffeinate -s bash bootstrap.sh
 ```
 
 To update, simply run `bash bootstrap.sh`, or `./bootstrap.sh` if running `fish`.
