@@ -20,6 +20,7 @@ apps=(
     bartender
     codekit
     dropbox
+    flashlight
     gfxcardstatus
     google-chrome-canary
     google-drive
