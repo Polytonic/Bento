@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"AutoFileName",
 		"GitGutter",
 		"Markdown Extended",
 		"Origami",
