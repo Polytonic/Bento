@@ -33,5 +33,4 @@ fi
 echo "Installation Complete!"
 echo "Note: some changes may require a restart in order to take effect."
 echo "This terminal will self-destruct in five seconds. Good luck $USER."
-source macosx.sh
-sleep 5; killall "Terminal";
+sleep 5; source macosx.sh; killall "Terminal";

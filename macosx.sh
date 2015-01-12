@@ -16,6 +16,9 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+/usr/bin/defaults write com.apple.loginwindow 'TALLogoutSavesState' -bool false
+defaults write com.apple.systemsound com.apple.sound.beep.sound /System/Library/Sounds/Submarine.aiff
+defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 
 # Write Dock Settings
 defaults write com.apple.dock autohide -bool true
@@ -28,7 +31,7 @@ defaults write com.apple.dock mineffect -string "suck"
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 1048576
 defaults write com.apple.dock wvous-br-corner -int 4
-defaults write com.apple.dock wvous-br-modifier -int 0
+defaults write com.apple.dock wvous-br-modifier -int 1048576
 defaults write com.apple.dock wvous-tl-corner -int 10
 defaults write com.apple.dock wvous-tl-modifier -int 1048576
 defaults write com.apple.dock wvous-tr-corner -int 12
