@@ -16,9 +16,9 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-/usr/bin/defaults write com.apple.loginwindow 'TALLogoutSavesState' -bool false
-defaults write com.apple.systemsound com.apple.sound.beep.sound /System/Library/Sounds/Submarine.aiff
+defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool false
 defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+defaults write com.apple.systemsound com.apple.sound.beep.sound /System/Library/Sounds/Submarine.aiff
 
 # Write Dock Settings
 defaults write com.apple.dock autohide -bool true
