@@ -31,13 +31,6 @@ function fish_prompt
 
 end
 
-# Set Date in Right-side Prompt
-function fish_right_prompt
-
-    date "+%I:%M"
-
-end
-
 # Show Hidden Files and Extensions
 function showhidden
 
