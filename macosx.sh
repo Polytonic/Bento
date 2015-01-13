@@ -53,3 +53,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clsv"
 
 # Write Google Chrome Settings
 defaults write com.google.chrome AppleEnableSwipeNavigateWithScrolls -bool false
+
+# Create a Microsoft User Data Folder
+mkdir -p ~/Library/Preferences/Microsoft\ User\ Data/
