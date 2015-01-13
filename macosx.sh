@@ -10,6 +10,9 @@ if [ "$CURRENT_PROFILE" != "$TERM_PROFILE" ]; then
     defaults import com.apple.terminal "$HOME/Library/Preferences/com.apple.terminal.plist"
 fi;
 
+# Mute the Startup Chime
+nvram SystemAudioVolume=" "
+
 # Write Global Settings
 defaults write NSGlobalDomain AppleHighlightColor -string "0.968627 0.831373 1.000000"
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
