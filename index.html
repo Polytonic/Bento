@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Periwinkle by Polytonic</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Periwinkle</h1>
+        <p>Straightforward Mac Bootstrapping</p>
+
+        <p class="view"><a href="https://github.com/Polytonic/Periwinkle">View the Project on GitHub <small>Polytonic/Periwinkle</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Polytonic/Periwinkle/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Polytonic/Periwinkle/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Polytonic/Periwinkle">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="periwinkle" class="anchor" href="#periwinkle" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/Polytonic/Periwinkle">Periwinkle</a>
+</h1>
+
+<p><img src="http://i.imgur.com/Ca3v00Z.png" alt="Screenshot"></p>
+
+<h2>
+<a id="summary" class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h2>
+
+<p>Periwinkle is a collection of scripts and configuration files to setup an OSX computer for development, loosely based on <a href="https://github.com/thoughtbot/laptop">thoughtbot/laptop</a> and <a href="http://dotfiles.github.io/">other dotfiles</a>. The script can safely run multiple times, where subsequent runs will upgrade existing packages and fix broken links.</p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>Periwinkle requires <a href="https://itunes.apple.com/us/app/xcode/id497799835">Xcode</a> or the <a href="https://developer.apple.com/library/ios/technotes/tn2339/_index.html">Xcode Command Line Tools</a>. Once <code>git</code> is available, clone this repository and run the bootstrapping script.</p>
+
+<div class="highlight highlight-bash"><pre>xcode-<span class="pl-k">select</span> <span class="pl-vo">--install</span>
+git clone https://github.com/Polytonic/Periwinkle.git
+<span class="pl-s3">cd</span> Periwinkle <span class="pl-k">&amp;&amp;</span> caffeinate -s bash bootstrap.sh</pre></div>
+
+<p>To update, simply run <code>bash bootstrap.sh</code>, or <code>./bootstrap.sh</code> if running <code>fish</code>.</p>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p>Periwinkle is currently configured to use the <a href="http://fishshell.com/">fish</a> shell. The standard prompt will expand onto a second line and display additional information when it detects that the current directory is a git repository. On first run, you should be prompted to enter your git credentials. For simplicity, the global <code>.gitignore</code> is shared with the <code>.gitignore</code> of this repository.</p>
+
+<p>The installation process handles a significant portion of the work involved with setting up the machine, but is incomplete in some regards. You will need to manually open Sublime Text and wait for it to finish downloading packages, as well as browse through System Preferences to set any remaining options inaccessible through defaults.</p>
+
+<p>Periwinkle uses a modified version of <a href="https://github.com/chriskempson/tomorrow-theme/">Tomorrow Night Eighties</a>.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<blockquote>
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2014 Kevin Fung</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+</blockquote>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Polytonic">Polytonic</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
