@@ -31,6 +31,7 @@ apps=(
     qlcolorcode
     qlmarkdown
     qlstephen
+    safari-tab-switching
     skype
     steam
     sublime-text3
@@ -74,6 +75,11 @@ brew upgrade
 brew prune
 brew cleanup
 brew cask cleanup
+
+# Install Safari Tab Switching
+if [ ! -d "/Library/Application Support/SIMBL/Plugins/SafariTabSwitching.bundle" ]; then
+    open /opt/homebrew-cask/Caskroom/safari-tab-switching/1.2.7/Safari\ Tab\ Switching-1.2.7.pkg
+fi
 
 # Download Thin-Client Installers
 echo "Downloading Extras ..."
