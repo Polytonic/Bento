@@ -36,6 +36,7 @@
 	"line_padding_top": -1,
 	"move_to_limit_on_up_down": true,
 	"open_files_in_new_window": false,
+	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
 		80,
