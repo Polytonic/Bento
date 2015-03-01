@@ -39,6 +39,7 @@ apps=(
     tower
     transmission
     vlc
+    vox-preferences-pane
 )
 brew cask install "${apps[@]}"
 
@@ -58,6 +59,7 @@ binaries=(
     shellcheck
     terminal-notifier
     tig
+    tree
 )
 brew install "${binaries[@]}"
 
@@ -66,6 +68,7 @@ echo "Installing Fonts"
 brew tap caskroom/fonts
 fonts=(
     font-fira-sans
+    font-fira-mono-for-powerline
 )
 brew cask install "${fonts[@]}"
 
