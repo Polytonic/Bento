@@ -1,17 +1,30 @@
 [alias]
+
     tree = log -n 25 --abbrev-commit --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     amend = commit --amend --reuse-message=HEAD
+    unstage = rm -r --cached
+
 [core]
+
     editor = subl -w
     autocrlf = input
     trustctime = false
+    whitespace = space-before-tab,tab-in-indent,trailing-space,tabwidth=4
+
 [color "status"]
+
     changed = yellow
     added = green
     untracked = red
+
 [credential]
+
     helper = osxkeychain
+
 [help]
+
     autocorrect = 50
+
 [push]
+
     default = simple
