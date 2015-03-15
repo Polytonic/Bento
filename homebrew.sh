@@ -24,6 +24,7 @@ apps=(
     gfxcardstatus
     google-chrome-canary
     google-drive
+    hyperswitch
     istat-menus
     kaleidoscope
     launchrocket

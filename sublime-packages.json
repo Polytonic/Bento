@@ -1,19 +1,31 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"Anaconda",
 		"AutoFileName",
+		"Better CoffeeScript",
+		"CMake",
+		"fish-shell",
 		"Git Commit Message Syntax",
 		"GitGutter",
 		"Markdown Extended",
 		"Origami",
 		"Package Control",
+		"Rust",
+		"RustAutoComplete",
 		"SideBarEnhancements",
 		"SublimeLinter",
+		"SublimeLinter-coffeelint",
+		"SublimeLinter-contrib-rustc",
+		"SublimeLinter-cppcheck",
 		"SublimeLinter-shellcheck",
 		"SublimeREPL",
 		"TabsExtra",
 		"Theme - Cobalt2",
+		"TOML",
 		"Tomorrow Color Schemes"
 	]
 }
