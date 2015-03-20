@@ -12,6 +12,8 @@ echo "Checking for Updates ..."
 brew doctor
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
+brew tap caskroom/fonts
+brew tap homebrew/dupes
 brew update
 
 # Install Application Binaries
@@ -66,7 +68,6 @@ brew install "${binaries[@]}"
 
 # Install Custom Fonts
 echo "Installing Fonts"
-brew tap caskroom/fonts
 fonts=(
     font-fira-sans
     font-fira-mono-for-powerline
