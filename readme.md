@@ -20,6 +20,15 @@ Periwinkle is currently configured to use the [fish](http://fishshell.com/) shel
 
 The installation process handles a significant portion of the work involved with setting up the machine, but is incomplete in some regards. You will need to manually open Sublime Text and wait for it to finish downloading packages, as well as browse through System Preferences to set any remaining options inaccessible through defaults.
 
+[Xcode Configuration](https://github.com/supermarin/Alcatraz)
+ - [Backlight](https://github.com/limejelly/Backlight-for-XCode)
+ - [Beginning of Line](https://github.com/insanehunter/XCode4_beginning_of_line)
+ - [DBSmartPanels](https://github.com/chaingarden/DBSmartPanels/)
+ - [FuzzyAutoComplete](https://github.com/FuzzyAutocomplete/FuzzyAutocompletePlugin)
+ - [GitDiff](https://github.com/johnno1962/GitDiff)
+ - [Helmet](https://github.com/brianmichel/Helmet)
+ - [XCActionBar](https://github.com/pdcgomes/XCActionBar)
+
 Periwinkle uses a modified version of [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme/).
 
 ## License

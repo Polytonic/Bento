@@ -27,6 +27,7 @@ apps=(
     google-chrome-canary
     google-drive
     hyperswitch
+    imageoptim
     istat-menus
     kaleidoscope
     launchrocket
@@ -40,6 +41,7 @@ apps=(
     sublime-text3
     tinkertool
     tower
+    totalfinder
     transmission
     vlc
     vox-preferences-pane

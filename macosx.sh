@@ -63,3 +63,6 @@ defaults write com.google.chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
 # Create a Microsoft User Data Folder
 mkdir -p ~/Library/Preferences/Microsoft\ User\ Data/
+
+# Install Alcatraz
+curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
