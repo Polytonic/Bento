@@ -72,6 +72,7 @@ brew install "${binaries[@]}"
 echo "Installing Fonts"
 fonts=(
     font-fira-sans
+    font-fira-mono
     font-fira-mono-for-powerline
 )
 brew cask install "${fonts[@]}"
