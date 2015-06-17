@@ -51,6 +51,7 @@ brew cask install "${apps[@]}"
 # Install Command Line Binaries
 echo "Installing Binaries ..."
 binaries=(
+    ccat
     fish
     flac
     hub

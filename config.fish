@@ -14,6 +14,9 @@ set __fish_git_prompt_char_upstream_diverged "? "
 set __fish_git_prompt_char_upstream_equal "="
 set __fish_git_prompt_char_upstream_prefix " ["
 
+# Define Aliases
+alias cat="ccat"
+
 # Override Terminal Title and Set Prompt
 function fish_title; echo $PWD | sed -e "s|^$HOME|~|" | tr -d "\n"; end
 function fish_prompt
