@@ -42,6 +42,7 @@ apps=(
     tinkertool
     tower
     totalfinder
+    turbo-boost-switcher
     transmission
     vlc
     vox-preferences-pane
