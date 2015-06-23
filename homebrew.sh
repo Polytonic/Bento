@@ -20,6 +20,7 @@ brew update
 echo "Installing Applications ..."
 apps=(
     bartender
+    cleanmymac
     codekit
     dropbox
     flashlight
