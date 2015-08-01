@@ -13,6 +13,10 @@ fi;
 # Mute the Startup Chime
 sudo nvram SystemAudioVolume=" "
 
+# Enable the Power Chime
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool true
+open /System/Library/CoreServices/PowerChime.app &
+
 # Disable the Guest User
 sudo defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool false
 
