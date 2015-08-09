@@ -8,6 +8,7 @@ export PATH="/usr/local/sbin:$PATH"
 # Secondary Scripts
 source homebrew.sh
 source symlinks.sh
+source macosx.sh
 
 # Personalize Git Configuration
 git config --global core.excludesfile "$PWD/.gitignore"
@@ -32,5 +33,3 @@ fi
 # Notify the User
 echo "Installation Complete!"
 echo "Note: some changes may require a restart in order to take effect."
-echo "This terminal will self-destruct in five seconds. Good luck $USER."
-sleep 5; source macosx.sh; killall "Terminal";
