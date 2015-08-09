@@ -74,13 +74,13 @@ curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh 
 # Download Safari Extensions
 echo "Downloading Safari Extensions"
 cd ~/Desktop
-if [ ! -d ~/Library/Safari/Extensions/Minimal\ Status\ Bar.safariextz ]; then
+if [ ! -f ~/Library/Safari/Extensions/Minimal\ Status\ Bar.safariextz ]; then
     curl -O -# https://github.com/visnup/Minimal-Status-Bar/releases/download/v1.17/Minimal-Status-Bar-1.17.safariextz
 fi
-if [ ! -d ~/Library/Safari/Extensions/1Password.safariextz ]; then
+if [ ! -f ~/Library/Safari/Extensions/1Password.safariextz ]; then
     curl -O -# https://cache.agilebits.com/dist/1P/ext/1Password-4.4.2.safariextz
 fi
-if [ ! -d ~/Library/Safari/Extensions/uBlock.safariextz ]; then
+if [ ! -f ~/Library/Safari/Extensions/uBlock.safariextz ]; then
     curl -O -# https://cloud.delosent.com/ublock-safari-0.9.5.0.safariextz
 fi
 cd -
