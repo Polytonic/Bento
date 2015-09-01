@@ -55,6 +55,7 @@ brew cask install "${apps[@]}"
 echo "Installing Binaries ..."
 binaries=(
     ccat
+    clang-format
     fish
     flac
     hub
