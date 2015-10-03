@@ -2,7 +2,7 @@
 	"always_show_minimap_viewport": true,
 	"auto_complete_commit_on_tab": true,
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night-Eighties.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"default_line_ending": "unix",
 	"drag_text": false,
 	"draw_minimap_border": true,
@@ -34,8 +34,8 @@
 		"draw_active"
 	],
 	"indent_to_bracket": true,
-	"line_padding_bottom": -1,
-	"line_padding_top": -1,
+	"line_padding_bottom": 0,
+	"line_padding_top": 0,
 	"move_to_limit_on_up_down": true,
 	"open_files_in_new_window": false,
 	"overlay_scroll_bars": "enabled",
@@ -51,7 +51,7 @@
 	"show_tab_close_buttons": true,
 	"spell_check": true,
 	"tab_size": 4,
-	"theme": "Cobalt2.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true

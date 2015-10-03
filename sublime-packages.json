@@ -15,6 +15,7 @@
 		"GLSL Validator",
 		"Jade",
 		"Markdown Extended",
+		"Material Theme",
 		"OpenGL Shading Language (GLSL)",
 		"Origami",
 		"Package Control",
@@ -30,8 +31,6 @@
 		"SublimeLinter-shellcheck",
 		"SublimeREPL",
 		"TabsExtra",
-		"Theme - Cobalt2",
 		"TOML",
-		"Tomorrow Color Schemes"
 	]
 }
