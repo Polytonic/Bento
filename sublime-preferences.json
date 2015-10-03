@@ -11,8 +11,6 @@
 	"folder_exclude_patterns":
 	[
 		".git",
-		".sass-cache",
-		"_site",
 		"node_modules",
 		"bower_components"
 	],
