@@ -1,16 +1,17 @@
-#!/usr/bin/env bash
+#! /usr/bin/env bash
 
-# Request Permission Upfront
+# Request Sudo Upfront
 sudo -v
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-export PATH="/usr/local/sbin:$PATH"
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2> /dev/null &
 
-# Secondary Scripts
-source homebrew.sh
-source symlinks.sh
-source macosx.sh
+# Run Installation Scripts
+source "homebrew/install.sh"
+source "system/install.sh"
+source "fish/install.sh"
+source "sublime/install.sh"
 
 # Personalize Git Configuration
+ln -fs "$PWD/.gitconfig" ~/.gitconfig
 git config --global core.excludesfile "$PWD/.gitignore"
 if ! grep -q "name =" "$PWD/.gitconfig"; then
     echo -n "Commit Author: " && read author

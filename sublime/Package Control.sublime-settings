@@ -1,14 +1,13 @@
 {
-	"in_process_packages":
-	[
-	],
 	"installed_packages":
 	[
 		"Anaconda",
 		"AutoFileName",
 		"Better CoffeeScript",
+		"C++11",
 		"Clang Format",
 		"CMake",
+		"CUDA C++",
 		"fish-shell",
 		"Git Commit Message Syntax",
 		"GitGutter",
@@ -16,6 +15,8 @@
 		"Jade",
 		"Markdown Extended",
 		"Material Theme",
+		"Materialize",
+		"OpenCL",
 		"OpenGL Shading Language (GLSL)",
 		"Origami",
 		"Package Control",
@@ -26,11 +27,11 @@
 		"Stylus",
 		"SublimeLinter",
 		"SublimeLinter-coffeelint",
+		"SublimeLinter-contrib-clang",
 		"SublimeLinter-contrib-rustc",
 		"SublimeLinter-cppcheck",
 		"SublimeLinter-shellcheck",
 		"SublimeREPL",
-		"TabsExtra",
-		"TOML",
+		"TabsExtra"
 	]
 }
