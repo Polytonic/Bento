@@ -1,24 +1,30 @@
 #! /usr/bin/env bash
 
-# Install Command Line Binaries
+# Install Application Binaries
 echo "Installing Casks ..."
-binaries=(
-    ccat
-    clang-format
-    fish
-    flac
-    grc
-    hub
-    imagemagick
-    node
-    pypy
-    python
-    python3
-    git
-    git-extras
-    shellcheck
-    terminal-notifier
-    tig
-    tree
+apps=(
+    bartender
+    caffeine
+    cleanmymac
+    codekit
+    dropbox
+    gfxcardstatus
+    google-chrome-canary
+    google-drive
+    imageoptim
+    istat-menus
+    kaleidoscope
+    launchrocket
+    league-of-legends
+    qlcolorcode
+    qlmarkdown
+    qlstephen
+    safari-tab-switching
+    skype
+    steam
+    sublime-text3
+    tower
+    transmission
+    vlc
 )
-brew install "${binaries[@]}"
+brew cask install "${apps[@]}"
