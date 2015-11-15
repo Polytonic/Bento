@@ -16,6 +16,7 @@ brew tap caskroom/fonts
 brew tap homebrew/dupes
 brew update
 
+# Install Bottles
 source "homebrew/brews.sh"
 source "homebrew/casks.sh"
 source "homebrew/fonts.sh"
