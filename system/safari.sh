@@ -12,11 +12,6 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
-# Install Safari Tab Switching
-if [ ! -d "/Library/Application Support/SIMBL/Plugins/SafariTabSwitching.bundle" ]; then
-    open /opt/homebrew-cask/Caskroom/safari-tab-switching/1.2.7/Safari\ Tab\ Switching-1.2.7.pkg
-fi
-
 # Download Safari Extensions
 echo "Downloading Safari Extensions"
 cd ~/Desktop || exit

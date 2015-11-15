@@ -19,7 +19,6 @@ apps=(
     qlcolorcode
     qlmarkdown
     qlstephen
-    safari-tab-switching
     skype
     steam
     sublime-text3
