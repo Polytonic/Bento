@@ -1,5 +1,8 @@
 #! /usr/bin/env bash
 
+# Install Software Updates
+softwareupdate -ia
+
 # Enable the Power Chime
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool true
 open /System/Library/CoreServices/PowerChime.app &
