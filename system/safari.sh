@@ -29,4 +29,7 @@ fi
 if [ ! -f ~/Library/Safari/Extensions/uBlock.safariextz ]; then
     curl -O -# https://cloud.delosent.com/ublock-safari-0.9.5.0.safariextz
 fi
+if [ ! -f ~/Library/Safari/Extensions/Retab.safariextz ]; then
+    curl -O -# https://github.com/bucaran/retab/blob/master/retab.safariextz
+fi
 cd - > /dev/null || exit
