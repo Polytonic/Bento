@@ -13,6 +13,7 @@ binaries=(
     python3
     git
     git-extras
+    git-lfs
     shellcheck
     terminal-notifier
     tig
