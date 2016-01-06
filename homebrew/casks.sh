@@ -4,10 +4,10 @@
 echo "Installing Casks ..."
 apps=(
     bartender
-    caffeine
     cleanmymac
     codekit
     dropbox
+    flux
     gfxcardstatus
     google-chrome-canary
     google-drive
