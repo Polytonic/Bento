@@ -9,8 +9,8 @@ apps=(
     dropbox
     flux
     gfxcardstatus
-    google-chrome-canary
     google-drive
+    hyperswitch
     imageoptim
     istat-menus
     kaleidoscope
