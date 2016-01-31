@@ -13,6 +13,7 @@ brew doctor
 brew install caskroom/cask/brew-cask
 brew tap caskroom/versions
 brew tap caskroom/fonts
+brew tap homebrew/binary
 brew tap homebrew/dupes
 brew update
 
