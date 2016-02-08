@@ -36,4 +36,5 @@
     required = true
 
 [rerere]
+
     enabled = true
