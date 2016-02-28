@@ -16,6 +16,7 @@ set __fish_git_prompt_char_upstream_prefix " ["
 
 # Define Aliases
 alias cat="ccat"
+alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 
 # Override Terminal Title and Set Prompt
 function fish_title; echo $PWD | sed -e "s|^$HOME|~|" | tr -d "\n"; end
