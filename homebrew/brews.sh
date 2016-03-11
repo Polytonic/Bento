@@ -18,5 +18,6 @@ binaries=(
     terminal-notifier
     tig
     tree
+    websocketd
 )
 brew install "${binaries[@]}"
