@@ -17,6 +17,11 @@ defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 defaults write org.m0k.transmission WarningDonate -bool false
 defaults write org.m0k.transmission WarningLegal -bool false
 
+# Symlink Moom Settings
+killall "Moom"
+ln -Fs "$PWD/system/preferences/com.manytricks.Moom.plist" ~/Library/Preferences/com.manytricks.Moom.plist
+open -a "Moom"
+
 # Download Thin-Client Installers
 echo "Downloading Extras ..."
 cd ~/Desktop || exit
