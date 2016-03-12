@@ -8,6 +8,6 @@ cd - > /dev/null || exit
 
 # Symlink the User Folder
 if [ ! -d ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]; then
-	mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+    mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
     ln -s "$PWD/sublime" ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 fi
