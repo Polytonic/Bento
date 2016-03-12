@@ -26,7 +26,7 @@ function fish_prompt
     set_color    normal;    echo -n " at "
     set_color -o yellow;    echo -n (hostname -s)
     set_color    normal;    echo -n " in "
-    set_color -o green;     echo -n (fish_title)
+    set_color -o green;     echo -n (prompt_pwd)
     set_color    normal;    echo -n " "
     if __fish_git_prompt > /dev/null
         printf "on%s\n" (__fish_git_prompt " %s]")
