@@ -3,10 +3,12 @@
 # Install Application Binaries
 echo "Installing Casks ..."
 apps=(
+    alfred
     bartender
     cleanmymac
     codekit
     dropbox
+    endurance
     flux
     gfxcardstatus
     google-drive
