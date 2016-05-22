@@ -28,3 +28,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 defaults write com.apple.systemsound com.apple.sound.beep.sound /System/Library/Sounds/Submarine.aiff
+
+# Configure LCD Font Smoothing (Default = 3, HiDPI = 0)
+defaults -currentHost write -globalDomain AppleFontSmoothing -int 0
