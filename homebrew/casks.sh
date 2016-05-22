@@ -29,3 +29,6 @@ apps=(
     vlc
 )
 brew cask install "${apps[@]}"
+
+# Hide the /opt/ Directory
+chflags hidden /opt
