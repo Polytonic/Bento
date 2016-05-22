@@ -31,4 +31,4 @@ apps=(
 brew cask install "${apps[@]}"
 
 # Hide the /opt/ Directory
-chflags hidden /opt
+sudo chflags hidden /opt
