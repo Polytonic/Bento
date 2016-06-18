@@ -3,14 +3,17 @@
 # Install Application Binaries
 echo "Installing Casks ..."
 apps=(
+    adobe-creative-cloud
     alfred
     bartender
+    battle-net
     cleanmymac
     codekit
     dropbox
     endurance
     flux
     gfxcardstatus
+    google-chrome
     google-drive
     hyperswitch
     imageoptim
