@@ -1,5 +1,8 @@
 #! /usr/bin/env bash
 
+# Permissions Check
+sudo chown -R $(whoami) "/usr/local"
+
 # Install Homebrew
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 if test ! "$(which brew)"; then
@@ -10,7 +13,7 @@ fi
 # Update Homebrew
 echo "Checking for Updates ..."
 brew doctor
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 brew tap caskroom/versions
 brew tap caskroom/fonts
 brew tap homebrew/binary

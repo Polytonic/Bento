@@ -17,6 +17,7 @@ binaries=(
     shellcheck
     terminal-notifier
     tig
+    trash
     tree
     websocketd
 )

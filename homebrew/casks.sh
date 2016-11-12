@@ -9,6 +9,7 @@ apps=(
     battle-net
     cleanmymac
     codekit
+    discord
     dropbox
     endurance
     flux
@@ -26,7 +27,7 @@ apps=(
     qlstephen
     skype
     steam
-    sublime-text3
+    sublime-text
     tower
     transmission
     vlc

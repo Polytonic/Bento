@@ -2,7 +2,8 @@
 
     tree = log -n 25 --abbrev-commit --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     amend = commit --amend --reuse-message=HEAD
-    unstage = rm -r --cached
+    discard = checkout --
+    unstage = reset -q HEAD --
 
 [core]
 
