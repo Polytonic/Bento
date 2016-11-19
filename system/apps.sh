@@ -17,6 +17,11 @@ defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 defaults write org.m0k.transmission WarningDonate -bool false
 defaults write org.m0k.transmission WarningLegal -bool false
 
+# Symlink HyperSwitch Settings
+killall "HyperSwitch"
+ln -Fs "$PWD/system/preferences/com.bahoom.HyperSwitch.plist" ~/Library/Preferences/com.bahoom.HyperSwitch.plist
+open -a "HyperSwitch"
+
 # Symlink Moom Settings
 killall "Moom"
 ln -Fs "$PWD/system/preferences/com.manytricks.Moom.plist" ~/Library/Preferences/com.manytricks.Moom.plist
