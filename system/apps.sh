@@ -10,7 +10,7 @@ mkdir -p ~/Library/Preferences/Microsoft\ User\ Data/
 curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
 
 # Transmission Settings
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
+defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool false
 defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads"
 defaults write org.m0k.transmission DownloadAsk -bool false
 defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
