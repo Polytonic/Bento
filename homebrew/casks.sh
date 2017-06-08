@@ -4,6 +4,7 @@
 echo "Installing Casks ..."
 apps=(
     adobe-creative-cloud
+    airfoil
     alfred
     bartender
     battle-net
