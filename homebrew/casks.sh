@@ -13,11 +13,13 @@ apps=(
     discord
     dropbox
     endurance
+    flume
     flux
     gfxcardstatus
     google-chrome
     google-drive
     hyperswitch
+    google-hangouts
     imageoptim
     istat-menus
     kaleidoscope
