@@ -6,29 +6,32 @@ apps=(
     adobe-creative-cloud
     airfoil
     alfred
+    audio-hijack
     bartender
     battle-net
     cleanmymac
     codekit
+    contexts
     discord
     dropbox
     endurance
     flume
     flux
     gfxcardstatus
+    google-backup-and-sync
     google-chrome
-    google-drive
-    hyperswitch
     google-hangouts
     imageoptim
     istat-menus
     kaleidoscope
     launchrocket
     league-of-legends
+    loopback
     qlcolorcode
     qlmarkdown
     qlstephen
     skype
+    soundsource
     steam
     sublime-text
     tower

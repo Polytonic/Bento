@@ -16,6 +16,7 @@ binaries=(
     git-lfs
     shellcheck
     terminal-notifier
+    thefuck
     tig
     trash
     tree
