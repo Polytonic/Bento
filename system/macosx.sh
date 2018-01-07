@@ -10,9 +10,7 @@ open /System/Library/CoreServices/PowerChime.app &
 # System Configuration
 sudo defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool false
 sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
-sudo tmutil disablelocal
 sudo pmset -a sms 0
-sudo nvram boot-args="mbasd=1"
 
 # Write Global Settings
 defaults write NSGlobalDomain AppleHighlightColor -string "0.968627 0.831373 1.000000"

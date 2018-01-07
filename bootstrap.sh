@@ -4,6 +4,9 @@
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2> /dev/null &
 
+# Automatically Accept the Xcode License
+sudo xcodebuild -license accept
+
 # Run Installation Scripts
 source "homebrew/install.sh"
 source "system/install.sh"

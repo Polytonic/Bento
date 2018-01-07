@@ -25,7 +25,6 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Python",
 		"Vintage"
 	],
 	"indent_guide_options":

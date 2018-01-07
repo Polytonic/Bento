@@ -17,12 +17,22 @@ defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 defaults write org.m0k.transmission WarningDonate -bool false
 defaults write org.m0k.transmission WarningLegal -bool false
 
-# Symlink HyperSwitch Settings
-killall "HyperSwitch"
-ln -Fs "$PWD/system/preferences/com.bahoom.HyperSwitch.plist" ~/Library/Preferences/com.bahoom.HyperSwitch.plist
-open -a "HyperSwitch"
+# Symlink Bartender Settings
+killall "Bartender 3"
+ln -Fs "$PWD/system/preferences/com.surteesstudios.Bartender.plist" ~/Library/Preferences/com.surteesstudios.Bartender.plist
+open -a "Bartender 3"
+
+# Symlink iStat Menus Settings
+ln -Fs "$PWD/system/preferences/com.bjango.istatmenus.plist" ~/Library/Preferences/com.bjango.istatmenus.plist
+ln -Fs "$PWD/system/preferences/com.bjango.istatmenus.status.plist" ~/Library/Preferences/com.bjango.istatmenus.status.plist
+ln -Fs "$PWD/system/preferences/com.bjango.istatmenus6.extras.plist" ~/Library/Preferences/com.bjango.istatmenus6.extras.plist
+killall "iStatMenusAgent" "iStat Menus Status" "iStat Menus Notifications" "iStatMenusDaemon"
 
 # Symlink Moom Settings
 killall "Moom"
 ln -Fs "$PWD/system/preferences/com.manytricks.Moom.plist" ~/Library/Preferences/com.manytricks.Moom.plist
 open -a "Moom"
+
+# Symlink Tower Settings
+killall "Tower"
+ln -Fs "$PWD/system/preferences/com.fournova.Tower2.plist" ~/Library/Preferences/com.fournova.Tower2.plist

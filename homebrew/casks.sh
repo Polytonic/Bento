@@ -13,8 +13,6 @@ apps=(
     codekit
     contexts
     discord
-    dropbox
-    endurance
     flume
     flux
     gfxcardstatus
@@ -25,13 +23,11 @@ apps=(
     istat-menus
     kaleidoscope
     launchrocket
-    league-of-legends
     loopback
     qlcolorcode
     qlmarkdown
     qlstephen
-    skype
-    soundsource
+    rocket
     steam
     sublime-text
     tower
@@ -39,6 +35,3 @@ apps=(
     vlc
 )
 brew cask install "${apps[@]}"
-
-# Hide the /opt/ Directory
-sudo chflags hidden /opt
