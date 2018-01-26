@@ -16,16 +16,17 @@ sudo pmset -a sms 0
 defaults write NSGlobalDomain AppleHighlightColor -string "0.968627 0.831373 1.000000"
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write NSGlobalDomain com.apple.sound.beep.feedback -bool true
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+defaults write NSGlobalDomain com.apple.sound.beep.sound "/System/Library/Sounds/Submarine.aiff"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
-defaults write com.apple.systemsound com.apple.sound.beep.sound /System/Library/Sounds/Submarine.aiff
 
 # Configure LCD Font Smoothing (Default = 3, HiDPI = 0)
 defaults -currentHost write -globalDomain AppleFontSmoothing -int 0
