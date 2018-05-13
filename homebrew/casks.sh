@@ -14,7 +14,6 @@ apps=(
     contexts
     discord
     flume
-    flux
     gfxcardstatus
     google-backup-and-sync
     google-chrome
