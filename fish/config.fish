@@ -15,6 +15,7 @@ set __fish_git_prompt_char_upstream_equal "="
 set __fish_git_prompt_char_upstream_prefix " ["
 
 # Define Aliases
+thefuck --alias | source
 alias cat="ccat"
 alias rm="trash"
 alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
