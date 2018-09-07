@@ -9,7 +9,6 @@ apps=(
     audio-hijack
     bartender
     battle-net
-    cleanmymac
     codekit
     contexts
     discord
