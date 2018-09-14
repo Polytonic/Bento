@@ -14,12 +14,6 @@ set __fish_git_prompt_char_upstream_diverged "? "
 set __fish_git_prompt_char_upstream_equal "="
 set __fish_git_prompt_char_upstream_prefix " ["
 
-# Define Aliases
-thefuck --alias | source
-alias cat="ccat"
-alias rm="trash"
-alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
-
 # Override Terminal Title and Set Prompt
 function fish_title; echo $PWD | sed -e "s|^$HOME|~|" | tr -d "\n"; end
 function fish_prompt
@@ -31,7 +25,7 @@ function fish_prompt
     set_color -o green;     echo -n (prompt_pwd)
     set_color    normal;    echo -n " "
     if __fish_git_prompt > /dev/null
-        printf "on%s\n" (__fish_git_prompt " %s]")
+        printf "on%s " (__fish_git_prompt " %s]")
     end
     set_color    white;     echo -e "👉 "
 
@@ -54,3 +48,9 @@ function showhidden
     end
 
 end
+
+# Define Aliases
+alias cat="ccat"
+alias rm="trash"
+alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+thefuck --alias | source
