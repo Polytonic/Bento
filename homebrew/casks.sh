@@ -17,6 +17,7 @@ apps=(
     google-backup-and-sync
     google-chrome
     google-hangouts
+    google-trends
     imageoptim
     istat-menus
     kaleidoscope
