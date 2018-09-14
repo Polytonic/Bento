@@ -3,6 +3,12 @@ set HOMEBREW /usr/local/bin
 set -gx PATH $HOMEBREW $PATH
 set -gx fish_greeting (set_color magenta)(date +"%A, %B %d, %Y at %r (%Z)")
 
+# Define Aliases
+alias cat="ccat"
+alias rm="trash"
+alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+thefuck --alias | source
+
 # Git Prompt Configuration
 set __fish_git_prompt_showupstream "verbose"
 set __fish_git_prompt_color_branch blue -o
@@ -49,8 +55,3 @@ function showhidden
 
 end
 
-# Define Aliases
-alias cat="ccat"
-alias rm="trash"
-alias simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
-thefuck --alias | source
