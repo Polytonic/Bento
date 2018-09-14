@@ -3,6 +3,7 @@
 # Install Command Line Binaries
 echo "Installing Brews ..."
 binaries=(
+    bash
     ccat
     fish
     flac
