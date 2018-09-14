@@ -25,4 +25,3 @@ echo "Cleaning Up Homebrew ..."
 brew upgrade
 brew prune
 brew cleanup
-brew cask cleanup
