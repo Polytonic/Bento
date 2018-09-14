@@ -35,4 +35,4 @@ open -a "Moom"
 
 # Symlink Tower Settings
 killall "Tower"
-ln -Fs "$PWD/system/preferences/com.fournova.Tower2.plist" ~/Library/Preferences/com.fournova.Tower2.plist
+ln -Fs "$PWD/system/preferences/com.fournova.Tower3.plist" ~/Library/Preferences/com.fournova.Tower3.plist
