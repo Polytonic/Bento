@@ -22,5 +22,6 @@ source "homebrew/fonts.sh"
 
 # Cleanup Homebrew
 echo "Cleaning Up Homebrew ..."
+brew cask upgrade
 brew upgrade
 brew cleanup

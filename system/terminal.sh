@@ -4,8 +4,8 @@
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Skip Theme Installation on Subsequent Runs
-theme = defaults read com.apple.terminal "Default Window Settings"
-if [[ theme == "Periwinkle" ]]
+theme=$(defaults read com.apple.terminal "Default Window Settings")
+if [[ $theme == "Periwinkle" ]]; then
     return
 fi
 
