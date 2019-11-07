@@ -3,6 +3,9 @@
 # Set Terminal Settings
 defaults write com.apple.terminal StringEncodings -array 4
 
+# Set iTerm Settings
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
 # Skip Theme Installation on Subsequent Runs
 theme=$(defaults read com.apple.terminal "Default Window Settings")
 if [[ $theme == "Periwinkle" ]]; then

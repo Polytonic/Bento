@@ -8,6 +8,7 @@ defaults write com.apple.dock minimize-to-application -bool true
 defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.dock static-only -bool true
 defaults write com.apple.dock showhidden -bool true
+defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.dock mineffect -string "suck"
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 1048576

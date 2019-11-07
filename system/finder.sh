@@ -13,3 +13,4 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
