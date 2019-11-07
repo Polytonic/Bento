@@ -15,7 +15,7 @@ apps=(
     gfxcardstatus
     google-chrome
     google-hangouts
-    google-trends
+    # google-trends
     imageoptim
     iterm2
     istat-menus
