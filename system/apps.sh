@@ -22,6 +22,10 @@ killall "Bartender 3"
 ln -Fs "$PWD/system/preferences/com.surteesstudios.Bartender.plist" ~/Library/Preferences/com.surteesstudios.Bartender.plist
 open -a "Bartender 3"
 
+# Symlink Contexts Settings
+killall "Contexts"
+ln -Fs "$PWD/system/preferences/com.contextsformac.Contexts.plist" ~/Library/Preferences/com.contextsformac.Contexts.plist
+
 # Symlink iStat Menus Settings
 ln -Fs "$PWD/system/preferences/com.bjango.istatmenus.plist" ~/Library/Preferences/com.bjango.istatmenus.plist
 ln -Fs "$PWD/system/preferences/com.bjango.istatmenus.status.plist" ~/Library/Preferences/com.bjango.istatmenus.status.plist

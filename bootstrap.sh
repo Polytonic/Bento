@@ -10,7 +10,9 @@ sudo xcodebuild -license accept
 # Run Installation Scripts
 source "homebrew/install.sh"
 source "system/install.sh"
+source "bash/install.sh"
 source "fish/install.sh"
+source "python/install.sh"
 source "sublime/install.sh"
 
 # Personalize Git Configuration

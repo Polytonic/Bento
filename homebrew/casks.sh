@@ -9,16 +9,15 @@ apps=(
     audio-hijack
     bartender
     battle-net
-    codekit
     contexts
     discord
     flume
     gfxcardstatus
-    google-backup-and-sync
     google-chrome
     google-hangouts
     google-trends
     imageoptim
+    iterm2
     istat-menus
     kaleidoscope
     launchrocket
@@ -31,6 +30,7 @@ apps=(
     sublime-text
     tower
     transmission
+    visual-studio-code
     vlc
 )
 brew cask install "${apps[@]}"

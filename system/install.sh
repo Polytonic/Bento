@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /usr/bin/env bash
 
 # Run Configuration Scripts
 source "system/macosx.sh"

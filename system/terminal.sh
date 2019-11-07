@@ -3,6 +3,12 @@
 # Set Terminal Settings
 defaults write com.apple.terminal StringEncodings -array 4
 
+# Skip Theme Installation on Subsequent Runs
+theme = defaults read com.apple.terminal "Default Window Settings"
+if [[ theme == "Periwinkle" ]]
+    return
+fi
+
 # Set Terminal Theme
 osascript <<EOD
 tell application "Terminal"

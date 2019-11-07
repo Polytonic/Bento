@@ -3,8 +3,7 @@
 # Install Custom Fonts
 echo "Installing Fonts ..."
 fonts=(
+    font-fira-code
     font-fira-sans
-    font-fira-mono
-    font-fira-mono-for-powerline
 )
 brew cask install "${fonts[@]}"

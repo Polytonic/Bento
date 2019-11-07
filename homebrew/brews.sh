@@ -8,16 +8,16 @@ binaries=(
     fish
     flac
     grc
+    jq
     node
     pypy
     python
-    python3
+    python2
     git
     git-extras
     git-lfs
     shellcheck
     terminal-notifier
-    thefuck
     tig
     trash
     tree

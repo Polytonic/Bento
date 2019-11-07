@@ -3,8 +3,8 @@
 	[
 		"A File Icon",
 		"All Autocomplete",
-		"Anaconda",
 		"AutoFileName",
+		"fish",
 		"Git Commit Message Syntax",
 		"GitGutter",
 		"MagicPython",
@@ -13,7 +13,6 @@
 		"Origami",
 		"Package Control",
 		"SublimeLinter",
-		"SublimeLinter-shellcheck",
 		"TabsExtra"
 	]
 }

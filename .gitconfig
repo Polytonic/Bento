@@ -30,6 +30,14 @@
 
     default = simple
 
+[pull]
+
+    rebase = true
+
+[rebase]
+
+    autoStash = true
+
 [filter "lfs"]
 
     clean = git-lfs clean %f

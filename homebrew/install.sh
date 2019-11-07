@@ -10,9 +10,9 @@ fi
 # Update Homebrew
 echo "Checking for Updates ..."
 brew doctor
-brew tap caskroom/cask
-brew tap caskroom/versions
-brew tap caskroom/fonts
+brew tap homebrew/cask
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-fonts
 brew update
 
 # Install Bottles
@@ -23,5 +23,4 @@ source "homebrew/fonts.sh"
 # Cleanup Homebrew
 echo "Cleaning Up Homebrew ..."
 brew upgrade
-brew prune
 brew cleanup
