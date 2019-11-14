@@ -11,6 +11,7 @@ apps=(
     battle-net
     contexts
     discord
+    firefox
     flume
     gfxcardstatus
     google-chrome
