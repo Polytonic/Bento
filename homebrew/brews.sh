@@ -11,6 +11,7 @@ binaries=(
     jq
     node
     pypy
+    pypy3
     python
     python2
     git
