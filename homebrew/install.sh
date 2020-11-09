@@ -11,6 +11,7 @@ fi
 echo "Checking for Updates ..."
 brew doctor
 brew tap homebrew/cask
+brew tap homebrew/cask-drivers
 brew tap homebrew/cask-versions
 brew tap homebrew/cask-fonts
 brew update

@@ -7,16 +7,17 @@ binaries=(
     ccat
     fish
     flac
+    git
+    git-extras
+    git-lfs
     grc
     jq
+    logitech-camera-settings
     node
     pypy
     pypy3
     python
     python2
-    git
-    git-extras
-    git-lfs
     shellcheck
     terminal-notifier
     tig
