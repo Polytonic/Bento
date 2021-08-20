@@ -3,7 +3,6 @@
 # Install Application Binaries
 echo "Installing Casks ..."
 apps=(
-    adobe-creative-cloud
     airfoil
     alfred
     audio-hijack
@@ -29,8 +28,8 @@ apps=(
     rocket
     steam
     sublime-text
+    sublime-merge
     tower
-    visual-studio-code
     vlc
 )
 brew cask install "${apps[@]}"
