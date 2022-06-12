@@ -26,15 +26,12 @@ binaries=(
 
 # Applications
 apps=(
-    bartender
     brave-browser
-    contexts
     discord
     firefox
     google-chrome
     imageoptim
     iterm2
-    istat-menus
     kaleidoscope
     rocket
     sublime-text
