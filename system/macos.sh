@@ -13,7 +13,7 @@ defaults write -g com.apple.sound.beep.feedback -bool true
 defaults write -g com.apple.sound.beep.sound "/System/Library/Sounds/Submarine.aiff"
 
 # Security and Privacy
-sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "🥝"
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText ""
 sudo defaults write /Library/Preferences/com.apple.alf globalstate -bool true
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
