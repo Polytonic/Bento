@@ -1,41 +1,33 @@
-#! /usr/bin/env bash
+#! /usr/bin/env zsh
+
+# Determine Absolute Working Path
+REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+
+# Personalize Git Configuration
+if [ ! -f "${HOME}/.gitconfig" ]; then
+    ln -fs "${REPOSITORY_ROOT}/.gitconfig" "${HOME}/.gitconfig"
+    git config --global core.excludesfile "${REPOSITORY_ROOT}/.gitignore"
+    if ! grep -q "name =" "${REPOSITORY_ROOT}/.gitconfig"; then
+        echo -n "Commit Author: " && read author
+        git config --global user.name "$author"
+    fi
+    if ! grep -q "email =" "${REPOSITORY_ROOT}/.gitconfig"; then
+        echo -n "Commit Email: " && read email
+        git config --global user.email "$email"
+    fi
+fi
 
 # Request Sudo Upfront
 sudo -v
 while true; do sudo -v; sleep 60; kill -0 "$$" || exit; done 2> /dev/null &
 
-# Automatically Accept the Xcode License
-sudo xcodebuild -license accept
+# Run Setup Scripts
+source system/homebrew.sh
+source shell/install.sh
+source sublime/install.sh
 
-# Run Installation Scripts
-source "homebrew/install.sh"
-source "system/install.sh"
-source "bash/install.sh"
-source "fish/install.sh"
-source "python/install.sh"
-source "sublime/install.sh"
-
-# Personalize Git Configuration
-ln -fs "$PWD/.gitconfig" ~/.gitconfig
-git config --global core.excludesfile "$PWD/.gitignore"
-if ! grep -q "name =" "$PWD/.gitconfig"; then
-    echo -n "Commit Author: " && read author
-    git config --global user.name "$author"
-fi
-if ! grep -q "email =" "$PWD/.gitconfig"; then
-    echo -n "Commit Email: " && read email
-    git config --global user.email "$email"
-fi
-
-# Change the Default Login Shell
-if [ "$SHELL" != "$(which fish)" ]; then
-    if ! grep -q "$(which fish)" "/etc/shells"; then
-        which fish | sudo tee -a /etc/shells > /dev/null
-    fi
-    echo "Changing Login Shell ..."
-    chsh -s "$(which fish)"
-fi
-
-# Notify the User
-echo "Installation Complete!"
-echo "Note: some changes may require a restart in order to take effect."
+# System Preferences
+source system/macos.sh
+source system/terminal.sh
+source system/dock.sh
+source system/finder.sh

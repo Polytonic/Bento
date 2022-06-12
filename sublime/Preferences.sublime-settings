@@ -15,17 +15,17 @@
 		"node_modules",
 		"bower_components"
 	],
-	"font_face": "Fira Code",
+	"font_face": "Operator Mono Book",
 	"font_options":
 	[
 		"directwrite"
 	],
-	"font_size": 13,
+	"font_size": 14,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
 	],
 	"indent_guide_options":
 	[
@@ -52,5 +52,5 @@
 	"theme": "Material-Theme-Darker.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
 }
