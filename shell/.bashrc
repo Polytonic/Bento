@@ -1,11 +1,11 @@
 # Determine Absolute Working Path
-REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+SHELL_PATH=$(dirname $(readlink -f .bashrc))
 
 # Set the Homebrew Path
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Load Aliases
-source "${REPOSITORY_ROOT}/shell/aliases.sh"
+source "${SHELL_PATH}/aliases.sh"
 
 # Enable Terminal Command Coloring
 GRC_ALIASES=true
