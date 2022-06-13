@@ -30,13 +30,11 @@ apps=(
     discord
     firefox
     google-chrome
-    imageoptim
     iterm2
     kaleidoscope
     rocket
     sublime-text
     tower
-    visual-studio
 )
 
 # Custom Fonts
@@ -53,4 +51,3 @@ brew install "${fonts[@]}"
 # Cleanup Homebrew
 brew doctor
 brew cleanup
-
