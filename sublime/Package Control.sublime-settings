@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"A File Icon",
 		"All Autocomplete",
 		"AutoFileName",
 		"fish",
@@ -12,6 +13,6 @@
 		"Origami",
 		"Package Control",
 		"SublimeLinter",
-		"TabsExtra"
-	]
+		"TabsExtra",
+	],
 }
