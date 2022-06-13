@@ -17,3 +17,12 @@ pip3 install powerline-status
 mkdir -p "${HOME}/.config/fish/"
 ln -fs "${REPOSITORY_ROOT}/shell/config.fish" "${HOME}/.config/fish/config.fish"
 echo "${HOME}/.config/fish/config.fish -> ${REPOSITORY_ROOT}/shell/config.fish"
+
+# Change the Default Login Shell
+if [ "$SHELL" != "$(which fish)" ]; then
+    if ! grep -q "$(which fish)" "/etc/shells"; then
+        which fish | sudo tee -a /etc/shells > /dev/null
+    fi
+    echo "Changing Login Shell ..."
+    chsh -s "$(which fish)"
+fi
