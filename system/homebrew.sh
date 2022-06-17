@@ -26,12 +26,15 @@ binaries=(
 
 # Applications
 apps=(
+    1password
+    alt-tab
     brave-browser
     discord
     firefox
     google-chrome
     iterm2
     kaleidoscope
+    monitorcontrol
     rocket
     sublime-text
     tower
