@@ -34,6 +34,7 @@ defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 defaults write -g AppleShowScrollBars -string "WhenScrolling"
 defaults write -g AppleScrollerPagingBehavior -int 1
 defaults write -g AppleInterfaceStyleSwitchesAutomatically -bool true
+defaults write -g AppleKeyboardUIMode -int 3
 
 # Expanded Save Panel Options
 defaults write -g NSDocumentSaveNewDocumentsToCloud -bool false
