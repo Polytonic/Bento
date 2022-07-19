@@ -17,6 +17,13 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "
 sudo defaults write /Library/Preferences/com.apple.alf globalstate -bool true
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+# Allow TouchID sudo Authentication
+if ! grep -q "pam_tid.so" "/etc/pam.d/sudo"; then
+    sudo sed -i "" '2i\
+auth       sufficient     pam_tid.so
+    ' "/etc/pam.d/sudo"
+fi
+
 # Network Settings
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
