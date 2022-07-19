@@ -3,7 +3,7 @@
 # Create iCloud Symlink
 ln -s ~/Library/Mobile\ Documents/com\~apple\~CloudDocs ~/iCloud
 chflags -h hidden ~/iCloud
-rm /Users/kfung/iCloud/com~apple~CloudDocs
+rm "/Users/${USER}/iCloud/com~apple~CloudDocs"
 
 # Sound Settings
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool true
