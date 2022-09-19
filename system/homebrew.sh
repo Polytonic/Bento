@@ -27,8 +27,8 @@ binaries=(
 # Applications
 apps=(
     1password
-    alt-tab
     brave-browser
+    contexts
     discord
     firefox
     google-chrome
