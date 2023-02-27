@@ -1,5 +1,5 @@
 # Determine Absolute Working Path
-SHELL_PATH=$(dirname $(readlink -f .bashrc))
+SHELL_PATH=$(dirname $(readlink -f ~/.bashrc))
 
 # Set the Homebrew Path
 eval "$(/opt/homebrew/bin/brew shellenv)"
