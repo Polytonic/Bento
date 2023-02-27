@@ -40,3 +40,4 @@ sublime/SublimeLinter
 sublime/TabsExtra
 sublime/oscrypto-ca-bundle.crt
 .vscode
+.nova
