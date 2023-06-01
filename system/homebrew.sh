@@ -14,6 +14,7 @@ binaries=(
     bash
     ccat
     fish
+    ffmpeg
     git
     git-extras
     git-lfs
@@ -22,6 +23,7 @@ binaries=(
     pypy3
     python
     trash
+    youtube-dl
 )
 
 # Applications
