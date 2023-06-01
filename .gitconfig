@@ -22,6 +22,24 @@
 
     helper = osxkeychain
 
+[diff]
+
+    tool = ksdiff
+
+[difftool "ksdiff"]
+
+    cmd = "$(which ksdiff) $LOCAL $REMOTE"
+
+[difftool]
+
+    prompt = false
+
+[filter "lfs"]
+
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
+
 [help]
 
     autocorrect = 50
@@ -38,13 +56,8 @@
 
     autoStash = true
 
-[filter "lfs"]
-
-    clean = git-lfs clean %f
-    smudge = git-lfs smudge %f
-    required = true
-
 [rerere]
 
     enabled = true
     autoupdate = true
+
