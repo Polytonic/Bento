@@ -9,7 +9,7 @@ source "${SHELL_PATH}/aliases.sh"
 
 # Enable Terminal Command Coloring
 GRC_ALIASES=true
-[[ -s "/etc/profile.d/grc.sh" ]] && source /etc/grc.sh
+[[ -s "/opt/homebrew/etc/grc.sh" ]] && source /opt/homebrew/etc/grc.sh
 
 # Configure Powerline Prompt
 powerline-daemon -q
