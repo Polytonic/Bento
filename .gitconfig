@@ -28,9 +28,22 @@
 
 [difftool "ksdiff"]
 
-    cmd = "$(which ksdiff) $LOCAL $REMOTE"
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [difftool]
+
+    prompt = false
+
+[merge]
+
+    tool = ksdiff
+
+[mergetool "ksdiff"]
+
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustExitCode = true
+
+[mergetool]
 
     prompt = false
 
