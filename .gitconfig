@@ -68,6 +68,7 @@
 [rebase]
 
     autoStash = true
+	updateRefs = true
 
 [rerere]
 
