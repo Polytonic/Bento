@@ -5,6 +5,11 @@
     discard = checkout --
     unstage = reset -q HEAD --
 
+[branch]
+
+    autosetupmerge = always
+    autosetuprebase = always
+
 [core]
 
     editor = subl -w
@@ -68,7 +73,7 @@
 [rebase]
 
     autoStash = true
-	updateRefs = true
+    updateRefs = true
 
 [rerere]
 
