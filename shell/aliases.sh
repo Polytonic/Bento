@@ -2,7 +2,7 @@
 alias sudo="sudo "
 alias cat="ccat"
 alias pip="pip3"
-alias python="python3"
+alias python="pypy3"
 alias rm="trash"
 
 # Open the iOS Simulator
