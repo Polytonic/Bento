@@ -22,6 +22,7 @@ binaries=(
     jq
     pypy3
     python
+    pipx
     trash
     youtube-dl
 )
@@ -30,6 +31,7 @@ binaries=(
 apps=(
     1password
     brave-browser
+    camo-studio
     contexts
     discord
     firefox
@@ -37,9 +39,11 @@ apps=(
     iterm2
     kaleidoscope
     monitorcontrol
+    postico
     rocket
     sublime-text
     tower
+    tableplus
 )
 
 # Custom Fonts
