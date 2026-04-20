@@ -1,7 +1,3 @@
-# Guard against double-sourcing (login shells source both .zprofile and .zshrc)
-[[ -n "$ZSHRC_LOADED" ]] && return
-ZSHRC_LOADED=1
-
 # Determine Absolute Working Path
 SHELL_PATH=$(dirname "$(readlink -f ~/.zshrc)")
 
