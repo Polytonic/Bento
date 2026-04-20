@@ -4,7 +4,6 @@
 		"A File Icon",
 		"All Autocomplete",
 		"AutoFileName",
-		"fish",
 		"Git Commit Message Syntax",
 		"GitGutter",
 		"MagicPython",
@@ -12,9 +11,15 @@
 		"Material Theme",
 		"Origami",
 		"Package Control",
+		"Sass",
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"TabsExtra",
+	],
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+		"Package Control",
 	],
 }

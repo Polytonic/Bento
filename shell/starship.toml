@@ -1,0 +1,69 @@
+# Starship Prompt Configuration
+
+format = """
+$username\
+${env_var.STARSHIP_COMPUTER_NAME}\
+$directory\
+$git_branch\
+$git_status\
+$python\
+$c\
+$cmd_duration\
+$character"""
+
+add_newline = false
+
+[username]
+show_always = true
+format = "[$user]($style)@"
+style_user = "#9B8EC8"
+style_root = "bold #F7768E"
+
+[hostname]
+disabled = true
+
+[env_var.STARSHIP_COMPUTER_NAME]
+format = "[$env_value]($style) "
+style = "#9B8EC8"
+
+[directory]
+style = "bold #9B8EC8"
+truncation_length = 4
+truncate_to_repo = true
+
+[git_branch]
+format = "on [$branch]($style) "
+style = "#7AA2F7"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "#E0AF68"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇡${ahead_count}⇣${behind_count}"
+modified = "󰏫${count}"
+staged = "󰐕${count}"
+untracked = "󰋗${count}"
+deleted = "󰍴${count}"
+conflicted = "󰀨${count}"
+
+[python]
+format = 'via [${version}( \($virtualenv\))]($style) '
+style = "#9ECE6A"
+detect_files = ["requirements.txt", "setup.py", "pyproject.toml", "Pipfile", ".python-version"]
+detect_extensions = ["py"]
+
+[c]
+format = 'via [$name $version]($style) '
+style = "#7DCFFF"
+detect_extensions = ["c", "h", "cpp", "hpp", "cc", "cxx"]
+
+[cmd_duration]
+min_time = 3_000
+format = "took [$duration]($style) "
+style = "#565F89"
+
+[character]
+success_symbol = "[>](bold #9B8EC8)"
+error_symbol = "[>](bold #F7768E)"
+vimcmd_symbol = "[<](bold #9B8EC8)"

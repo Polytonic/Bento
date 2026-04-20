@@ -10,6 +10,10 @@
     autosetupmerge = always
     autosetuprebase = always
 
+[include]
+
+    path = ~/.gitconfig.local
+
 [core]
 
     editor = subl -w

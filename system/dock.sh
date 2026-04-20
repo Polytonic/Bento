@@ -1,10 +1,11 @@
-#! /usr/bin/env bash
+# Sourced by bootstrap.sh
 
 # Write Dock Settings
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock minimize-to-application -bool true
 defaults write com.apple.dock static-only -bool true
 defaults write com.apple.dock showhidden -bool true
+defaults write com.apple.dock slow-motion-allowed -bool true
 defaults write com.apple.dock appswitcher-all-displays -bool true
 
 # Configure Mission Control
@@ -23,4 +24,4 @@ defaults write com.apple.dock wvous-tr-corner -int 12
 defaults write com.apple.dock wvous-tr-modifier -int 0
 
 # Restart the Dock
-killall Dock
+killall Dock || true

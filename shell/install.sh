@@ -1,28 +1,12 @@
-#! /usr/bin/env zsh
-
-# Determine Absolute Working Path
-REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+# Sourced by bootstrap.sh
 
 # Symlink Shell Profiles
-ln -fs "${REPOSITORY_ROOT}/shell/.bashrc" "${HOME}/.bashrc"
-echo "${HOME}/.bashrc -> ${REPOSITORY_ROOT}/shell/.bashrc"
 ln -fs "${REPOSITORY_ROOT}/shell/.zshrc" "${HOME}/.zshrc"
 echo "${HOME}/.zshrc -> ${REPOSITORY_ROOT}/shell/.zshrc"
+ln -fs "${REPOSITORY_ROOT}/shell/.zprofile" "${HOME}/.zprofile"
+echo "${HOME}/.zprofile -> ${REPOSITORY_ROOT}/shell/.zprofile"
 
-# Powerline Installation
-python3 -m pip install --upgrade pip
-pip3 install powerline-status
-
-# Fish Configuration
-mkdir -p "${HOME}/.config/fish/"
-ln -fs "${REPOSITORY_ROOT}/shell/config.fish" "${HOME}/.config/fish/config.fish"
-echo "${HOME}/.config/fish/config.fish -> ${REPOSITORY_ROOT}/shell/config.fish"
-
-# Change the Default Login Shell
-if [ "$SHELL" != "$(which fish)" ]; then
-    if ! grep -q "$(which fish)" "/etc/shells"; then
-        which fish | sudo tee -a /etc/shells > /dev/null
-    fi
-    echo "Changing Login Shell ..."
-    chsh -s "$(which fish)"
-fi
+# Starship Prompt Configuration
+mkdir -p "${HOME}/.config"
+ln -fs "${REPOSITORY_ROOT}/shell/starship.toml" "${HOME}/.config/starship.toml"
+echo "${HOME}/.config/starship.toml -> ${REPOSITORY_ROOT}/shell/starship.toml"

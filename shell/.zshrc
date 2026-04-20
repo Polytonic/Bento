@@ -1,16 +1,45 @@
+# Guard against double-sourcing (login shells source both .zprofile and .zshrc)
+[[ -n "$ZSHRC_LOADED" ]] && return
+ZSHRC_LOADED=1
+
 # Determine Absolute Working Path
-SHELL_PATH=$(dirname $(readlink -f ~/.zshrc))
+SHELL_PATH=$(dirname "$(readlink -f ~/.zshrc)")
+
+# Add pipx/local bin to PATH
+export PATH="$HOME/.local/bin:$PATH"
 
 # Set the Homebrew Path
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null || /usr/local/bin/brew shellenv 2>/dev/null)"
 
 # Load Aliases
 source "${SHELL_PATH}/aliases.sh"
 
-# Enable Terminal Command Coloring
-GRC_ALIASES=true
-[[ -s "/opt/homebrew/etc/grc.zsh" ]] && source /opt/homebrew/etc/grc.zsh
+# Claude Code
+export CLAUDE_CODE_EFFORT_LEVEL=max
 
-# Configure Powerline Prompt
-POWERLINE_HOME=$(pip show powerline-status | grep -E "^(?:Location: )(\S+)" | sed "s/.*[: ]//g")
-source "${POWERLINE_HOME}/powerline/bindings/zsh/powerline.zsh"
+# Enable Terminal Command Coloring
+export CLICOLOR=1
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
+export LS_COLORS="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+
+GRC_ALIASES=true
+[[ -s "${HOMEBREW_PREFIX}/etc/grc.zsh" ]] && source "${HOMEBREW_PREFIX}/etc/grc.zsh"
+
+# Completions
+FPATH="${HOMEBREW_PREFIX}/share/zsh-completions:$FPATH"
+autoload -Uz compinit
+compinit -C
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu select
+
+# Configure Prompt
+export STARSHIP_COMPUTER_NAME="$(scutil --get ComputerName 2>/dev/null || hostname -s)"
+eval "$(starship init zsh)"
+
+# Autosuggestions and Syntax Highlighting (must be after compinit and starship)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#787C99"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+source "${HOMEBREW_PREFIX}/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "${HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

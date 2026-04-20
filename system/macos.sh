@@ -1,13 +1,12 @@
-#! /usr/bin/env bash
+# Sourced by bootstrap.sh
+# https://git.herrbischoff.com/awesome-macos-command-line/about/
 
 # Create iCloud Symlink
-ln -s ~/Library/Mobile\ Documents/com\~apple\~CloudDocs ~/iCloud
+ln -sf ~/Library/Mobile\ Documents/com\~apple\~CloudDocs ~/iCloud
 chflags -h hidden ~/iCloud
-rm "/Users/${USER}/iCloud/com~apple~CloudDocs"
 
 # Sound Settings
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool true
-open /System/Library/CoreServices/PowerChime.app &
 defaults write com.apple.systemsound com.apple.sound.uiaudio.enabled -bool true
 defaults write -g com.apple.sound.beep.feedback -bool true
 defaults write -g com.apple.sound.beep.sound "/System/Library/Sounds/Submarine.aiff"
@@ -18,23 +17,23 @@ sudo defaults write /Library/Preferences/com.apple.alf globalstate -bool true
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Allow TouchID sudo Authentication
-if ! grep -q "pam_tid.so" "/etc/pam.d/sudo"; then
+# Use sudo_local (survives macOS updates, unlike /etc/pam.d/sudo)
+if [ ! -f "/etc/pam.d/sudo_local" ]; then
+    sudo cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local
+fi
+if ! grep -Fq "pam_tid.so" "/etc/pam.d/sudo_local"; then
     sudo sed -i "" '2i\
 auth       sufficient     pam_tid.so
-    ' "/etc/pam.d/sudo"
+    ' "/etc/pam.d/sudo_local"
 fi
+
+# Disable File Sharing
+sudo launchctl disable system/com.apple.smbd 2>/dev/null || true
 
 # Network Settings
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80
-defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
 
 # System Preferences
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false

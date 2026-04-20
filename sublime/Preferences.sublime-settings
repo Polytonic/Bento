@@ -12,19 +12,15 @@
 	"folder_exclude_patterns":
 	[
 		".git",
-		"node_modules",
-		"bower_components"
+		"node_modules"
 	],
 	"font_face": "Operator Mono Book",
-	"font_options":
-	[
-		"directwrite"
-	],
 	"font_size": 14,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Package Control",
 		"Vintage",
 	],
 	"indent_guide_options":
@@ -53,4 +49,6 @@
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
+	"update_check": true,
+	"index_files": false,
 }
