@@ -11,3 +11,17 @@ cd Bento && caffeinate -s zsh bootstrap.sh
 ```
 
 To update, run `./bootstrap.sh` as needed.
+
+## Diagnostics
+Run `doctor.sh` to check system health, verify symlinks, and detect stale packages.
+
+```bash
+zsh doctor.sh
+```
+
+## Teardown
+Run `unlink.sh` to remove all symlinks created by the bootstrap without deleting the repo.
+
+```bash
+zsh unlink.sh
+```
