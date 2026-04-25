@@ -2,6 +2,7 @@
 brew "bash"
 brew "bat"
 brew "cmake"
+brew "fontforge"
 brew "gh"
 brew "git"
 brew "git-extras"

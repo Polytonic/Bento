@@ -380,7 +380,7 @@
     "Blue Component" : 0
   },
   "Blur" : true,
-  "Normal Font" : "OperatorMono-Book 12",
+  "Normal Font" : "CascadiaCodeNF-Regular 12",
   "Vertical Spacing" : 1,
   "Ansi 7 Color" : {
     "Green Component" : 0.99997437000274658,
@@ -416,7 +416,7 @@
   "Bound Hosts" : [
 
   ],
-  "Non Ascii Font" : "FiraCode-Retina 13",
+  "Non Ascii Font" : "CascadiaCodeNF-Regular 12",
   "Ansi 13 Color" : {
     "Green Component" : 0.59999999999999998,
     "Red Component" : 0.80000000000000004,

@@ -178,6 +178,34 @@ else
 fi
 
 # ------------------------------------------------------------------
+# Fonts
+# ------------------------------------------------------------------
+echo ""
+echo "Fonts"
+echo "-----"
+
+patched_fonts=("${HOME}"/Library/Fonts/OperatorMonoNerdFontMono-{Regular,Book}.*(N))
+if (( ${#patched_fonts} )); then
+    pass "Operator Mono Nerd Font (patched)"
+elif [[ -f "${HOME}/Library/Fonts/OperatorMono-Book.otf" ]]; then
+    warn "Operator Mono found but not patched (run bootstrap.sh)"
+else
+    pass "Using Cascadia Code NF (fallback)"
+fi
+
+if [[ -f "${HOME}/Library/Fonts/CascadiaCodeNF.ttf" ]]; then
+    pass "Cascadia Code NF is installed"
+else
+    fail "Cascadia Code NF is missing (brew install --cask font-cascadia-code-nf)"
+fi
+
+if command -v fontforge &>/dev/null; then
+    pass "fontforge"
+else
+    warn "fontforge is not installed (needed for font patching)"
+fi
+
+# ------------------------------------------------------------------
 # Summary
 # ------------------------------------------------------------------
 echo ""
