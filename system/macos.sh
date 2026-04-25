@@ -36,7 +36,6 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # System Preferences
-defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 defaults write -g AppleShowScrollBars -string "WhenScrolling"
 defaults write -g AppleScrollerPagingBehavior -int 1
 defaults write -g AppleInterfaceStyleSwitchesAutomatically -bool true
@@ -57,9 +56,15 @@ defaults write com.apple.screencapture type -string "png"
 # Restore Scroll Direction
 defaults write -g com.apple.swipescrolldirection -bool false
 
+# Disable Click Desktop to Show Desktop
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+
+# Disable Window Tiling
+defaults write com.apple.WindowManager EnableTilingByEdgeDrag -bool false
+defaults write com.apple.WindowManager EnableTilingOptionAccelerator -bool false
+defaults write com.apple.WindowManager EnableTopTilingByEdgeDrag -bool false
+
 # Mac App Store
 defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
 defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-defaults write com.apple.commerce AutoUpdate -bool true

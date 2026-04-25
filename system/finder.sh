@@ -13,6 +13,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
+defaults write com.apple.finder FXRemoveOldTrashItems -bool true
 
 # Show item info near icons on the desktop and in other icon views
 # PlistBuddy fails if key paths don't exist yet (e.g., fresh install)

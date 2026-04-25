@@ -1,4 +1,4 @@
-# Sourced by bootstrap.sh
+# Sourced by bootstrap.sh on first run. Source directly to reset.
 
 # Write Dock Settings
 defaults write com.apple.dock autohide -bool true
@@ -7,6 +7,9 @@ defaults write com.apple.dock static-only -bool true
 defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.dock slow-motion-allowed -bool true
 defaults write com.apple.dock appswitcher-all-displays -bool true
+
+# Hide Recent Apps Section
+defaults write com.apple.dock show-recents -bool false
 
 # Configure Mission Control
 defaults write com.apple.dock mru-spaces -bool false

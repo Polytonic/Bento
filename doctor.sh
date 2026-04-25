@@ -178,6 +178,52 @@ else
 fi
 
 # ------------------------------------------------------------------
+# Dock
+# ------------------------------------------------------------------
+echo ""
+echo "Dock"
+echo "----"
+
+dock_checks=(
+    # Dock Behavior
+    "autohide:1:Autohide"
+    "minimize-to-application:1:Minimize to application"
+    "static-only:1:Static only (no recent apps)"
+    "showhidden:1:Show hidden apps"
+    "slow-motion-allowed:1:Slow motion allowed"
+    "appswitcher-all-displays:1:App Switcher on all displays"
+    "show-recents:0:Hide recent apps"
+
+    # Mission Control
+    "mru-spaces:0:MRU Spaces disabled"
+    "expose-group-apps:1:Expose groups by app"
+
+    # Hot Corners
+    "wvous-tl-corner:10:Hot corner: top-left"
+    "wvous-tl-modifier:1048576:Hot corner: top-left modifier"
+    "wvous-bl-corner:5:Hot corner: bottom-left"
+    "wvous-bl-modifier:1048576:Hot corner: bottom-left modifier"
+    "wvous-br-corner:4:Hot corner: bottom-right"
+    "wvous-br-modifier:1048576:Hot corner: bottom-right modifier"
+    "wvous-tr-corner:12:Hot corner: top-right"
+    "wvous-tr-modifier:0:Hot corner: top-right modifier"
+)
+
+for check in "${dock_checks[@]}"; do
+    key="${check%%:*}"
+    rest="${check#*:}"
+    expected="${rest%%:*}"
+    label="${rest#*:}"
+
+    actual=$(defaults read com.apple.dock "$key" 2>/dev/null)
+    if [[ "$actual" == "$expected" ]]; then
+        pass "$label"
+    else
+        warn "$label (source system/dock.sh to reset)"
+    fi
+done
+
+# ------------------------------------------------------------------
 # Fonts
 # ------------------------------------------------------------------
 echo ""

@@ -28,7 +28,13 @@ fi
 # System Preferences
 source "${REPOSITORY_ROOT}/system/macos.sh"
 source "${REPOSITORY_ROOT}/system/terminal.sh"
-source "${REPOSITORY_ROOT}/system/dock.sh"
+# Configure Dock on First Run Only
+DOCK_SENTINEL="${HOME}/.config/bento/.dock-configured"
+if [ ! -f "${DOCK_SENTINEL}" ]; then
+    source "${REPOSITORY_ROOT}/system/dock.sh"
+    mkdir -p "$(dirname "${DOCK_SENTINEL}")"
+    touch "${DOCK_SENTINEL}"
+fi
 source "${REPOSITORY_ROOT}/system/finder.sh"
 
 # Run Setup Scripts
