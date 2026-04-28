@@ -91,8 +91,14 @@ if [[ -f "${FONT_DIR}/OperatorMono-Book.otf" ]]; then
     fi
 
     if $needs_patching; then
+        # Ensure gh is available before attempting to download the patcher
+        if [[ ! -f "${CACHE_DIR}/font-patcher" ]] && ! command -v gh &>/dev/null; then
+            echo "[!!] gh not found, cannot download Nerd Fonts patcher, using Cascadia Code NF"
+            needs_patching=false
+        fi
+
         # Ensure patcher is cached
-        if [[ ! -f "${CACHE_DIR}/font-patcher" ]]; then
+        if $needs_patching && [[ ! -f "${CACHE_DIR}/font-patcher" ]]; then
             download_patcher || {
                 echo "[!!] Failed to download Nerd Fonts patcher, using Cascadia Code NF"
                 needs_patching=false

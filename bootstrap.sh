@@ -9,6 +9,12 @@ sudo -v
 while true; do sudo -v; sleep 60; kill -0 "$$" || exit; done 2> /dev/null &
 trap 'kill %1 2>/dev/null' EXIT INT TERM
 
+# Set Login Shell to Zsh
+current_shell=$(dscl . -read ~/ UserShell 2>/dev/null | awk '{print $2}')
+if [ "$current_shell" != "/bin/zsh" ]; then
+    sudo chsh -s /bin/zsh "$USER"
+fi
+
 # Symlink Git Configuration
 if [ ! -L "${HOME}/.gitconfig" ]; then
     ln -fs "${REPOSITORY_ROOT}/.gitconfig" "${HOME}/.gitconfig"
