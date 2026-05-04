@@ -13,6 +13,9 @@ source "${SHELL_PATH}/aliases.sh"
 # Claude Code
 export CLAUDE_CODE_EFFORT_LEVEL=max
 
+# Shell Options
+setopt AUTO_CD
+
 # Terminal Command Coloring
 export CLICOLOR=1
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
@@ -22,9 +25,10 @@ GRC_ALIASES=true
 [[ -s "${HOMEBREW_PREFIX}/etc/grc.zsh" ]] && source "${HOMEBREW_PREFIX}/etc/grc.zsh"
 
 # Completions
-FPATH="${HOMEBREW_PREFIX}/share/zsh-completions:$FPATH"
+fpath=("${HOMEBREW_PREFIX}/share/zsh-completions" "${fpath[@]}")
+typeset -gU FPATH fpath
 autoload -Uz compinit
-compinit -C
+compinit
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
