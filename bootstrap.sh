@@ -6,8 +6,21 @@ REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
 
 # Request Sudo Upfront
 sudo -v
-while true; do sudo -v; sleep 60; kill -0 "$$" || exit; done 2> /dev/null &
-trap 'kill %1 2>/dev/null' EXIT INT TERM
+while true; do sudo -n -v || exit; sleep 60; kill -0 "$$" || exit; done 2> /dev/null &
+sudo_keepalive_pid=$!
+cleanup_sudo_keepalive() {
+    kill "$sudo_keepalive_pid" 2>/dev/null || true
+}
+
+stop_bootstrap() {
+    local exit_status=$1
+    cleanup_sudo_keepalive
+    exit "$exit_status"
+}
+
+trap cleanup_sudo_keepalive EXIT
+trap 'stop_bootstrap 130' INT
+trap 'stop_bootstrap 143' TERM
 
 # Set Login Shell to Zsh
 current_shell=$(dscl . -read ~/ UserShell 2>/dev/null | awk '{print $2}')
