@@ -31,14 +31,6 @@ ehthumbs.db
 Thumbs.db
 
 # Editor Generated Files
-sublime/Package Control.cache
-sublime/Package Control.last-run
-sublime/Package Control.merged-ca-bundle
-sublime/Package Control.system-ca-bundle
-sublime/Package Control.user-ca-bundle
-sublime/SublimeLinter
-sublime/TabsExtra
-sublime/oscrypto-ca-bundle.crt
 *.swp
 .gitconfig.local
 .vscode

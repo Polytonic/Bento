@@ -10,6 +10,4 @@ BENTO_SYMLINKS=(
     "${HOME}/.config/starship.toml:${REPOSITORY_ROOT}/shell/starship.toml"
     "${HOME}/.gitconfig:${REPOSITORY_ROOT}/.gitconfig"
     "${HOME}/iCloud:${HOME}/Library/Mobile Documents/com~apple~CloudDocs"
-    "${HOME}/Library/Application Support/Sublime Text/Packages/User/Package Control.sublime-settings:${REPOSITORY_ROOT}/sublime/Package Control.sublime-settings"
-    "${HOME}/Library/Application Support/Sublime Text/Packages/User/Preferences.sublime-settings:${REPOSITORY_ROOT}/sublime/Preferences.sublime-settings"
 )

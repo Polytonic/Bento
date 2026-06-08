@@ -16,7 +16,7 @@
 
 [core]
 
-    editor = subl -w
+    editor = code --wait
     autocrlf = input
     trustctime = false
     whitespace = space-before-tab,tab-in-indent,trailing-space,tabwidth=4
