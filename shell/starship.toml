@@ -28,24 +28,20 @@ style = "#9B8EC8"
 
 [directory]
 style = "bold #9B8EC8"
-truncation_length = 4
-truncate_to_repo = true
+fish_style_pwd_dir_length = 1
+truncation_length = 1
+truncate_to_repo = false
 
 [git_branch]
-format = "on [$branch]($style) "
+format = "[\\($branch\\)]($style) "
 style = "#7AA2F7"
 
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
+format = '([\($ahead_behind\)]($style) )'
 style = "#E0AF68"
 ahead = "⇡${count}"
 behind = "⇣${count}"
 diverged = "⇡${ahead_count}⇣${behind_count}"
-modified = "󰏫${count}"
-staged = "󰐕${count}"
-untracked = "󰋗${count}"
-deleted = "󰍴${count}"
-conflicted = "󰀨${count}"
 
 [python]
 format = 'via [${version}( \($virtualenv\))]($style) '
