@@ -84,7 +84,7 @@ echo "--------"
 
 if [[ -f "${REPOSITORY_ROOT}/Brewfile" ]] && command -v brew &>/dev/null; then
     # Check for packages in Brewfile that are not installed
-    missing=$(brew bundle check --file="${REPOSITORY_ROOT}/Brewfile" 2>&1)
+    missing=$(brew bundle check --no-upgrade --file="${REPOSITORY_ROOT}/Brewfile" 2>&1)
     if [[ $? -eq 0 ]]; then
         pass "All Brewfile packages are installed"
     else
@@ -96,8 +96,7 @@ if [[ -f "${REPOSITORY_ROOT}/Brewfile" ]] && command -v brew &>/dev/null; then
     if [[ -z "$cleanup_output" ]]; then
         pass "No extra packages outside Brewfile"
     else
-        extra_count=$(echo "$cleanup_output" | wc -l | tr -d ' ')
-        warn "$extra_count package(s) installed but not in Brewfile (brew bundle cleanup)"
+        warn "Additional packages outside Brewfile (review with brew bundle cleanup)"
     fi
 else
     [[ ! -f "${REPOSITORY_ROOT}/Brewfile" ]] && fail "Brewfile not found"
@@ -188,11 +187,11 @@ dock_checks=(
     # Dock Behavior
     "autohide:1:Autohide"
     "minimize-to-application:1:Minimize to application"
-    "static-only:1:Static only (no recent apps)"
+    "static-only:0:Show pinned apps"
     "showhidden:1:Show hidden apps"
     "slow-motion-allowed:1:Slow motion allowed"
     "appswitcher-all-displays:1:App Switcher on all displays"
-    "show-recents:0:Hide recent apps"
+    "show-recents:1:Show recent apps"
 
     # Mission Control
     "mru-spaces:0:MRU Spaces disabled"

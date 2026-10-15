@@ -20,7 +20,9 @@ brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 
 # AI Helpers
+cask "chatgpt"
 cask "claude"
+cask "claude-code@latest"
 cask "codex"
 
 # Applications
