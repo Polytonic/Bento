@@ -215,16 +215,22 @@ def update_iterm2():
 
     # A running iTerm2 will overwrite defaults changes with its in-memory state.
     # Quit it before writing so the import sticks.
-    inside_iterm = os.environ.get("TERM_PROGRAM") == "iTerm.app"
+    # pgrep should include ancestors (-a) so iTerm2 is detected from a shell inside it.
+    # inside_iterm should also hold when iTerm2 is an ancestor (matched only with -a),
+    # because TERM_PROGRAM can be unset or overridden.
     iterm_running = subprocess.run(
-        ["pgrep", "-x", "iTerm2"], capture_output=True,
+        ["pgrep", "-ax", "iTerm2"], capture_output=True,
     ).returncode == 0
+    iterm_is_ancestor = iterm_running and subprocess.run(
+        ["pgrep", "-x", "iTerm2"], capture_output=True,
+    ).returncode != 0
+    inside_iterm = os.environ.get("TERM_PROGRAM") == "iTerm.app" or iterm_is_ancestor
 
     if iterm_running and not inside_iterm:
         subprocess.run(["osascript", "-e", 'tell application "iTerm" to quit'])
         # Wait for iTerm2 to flush preferences and exit
         for _ in range(10):
-            if subprocess.run(["pgrep", "-x", "iTerm2"], capture_output=True).returncode != 0:
+            if subprocess.run(["pgrep", "-ax", "iTerm2"], capture_output=True).returncode != 0:
                 break
             time.sleep(0.5)
 
