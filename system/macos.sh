@@ -21,10 +21,13 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 if [ ! -f "/etc/pam.d/sudo_local" ]; then
     sudo cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local
 fi
-if ! grep -Fq "pam_tid.so" "/etc/pam.d/sudo_local"; then
-    sudo sed -i "" '2i\
-auth       sufficient     pam_tid.so
-    ' "/etc/pam.d/sudo_local"
+# The guard should match only an active line, not the commented one in Apple's template
+if ! grep -Eq '^[[:space:]]*auth[[:space:]]+sufficient[[:space:]]+pam_tid\.so' "/etc/pam.d/sudo_local"; then
+    # The appended line should start on its own line when the file lacks a trailing newline
+    if [ -n "$(tail -c 1 "/etc/pam.d/sudo_local")" ]; then
+        echo | sudo tee -a "/etc/pam.d/sudo_local" > /dev/null
+    fi
+    echo "auth       sufficient     pam_tid.so" | sudo tee -a "/etc/pam.d/sudo_local" > /dev/null
 fi
 
 # Disable File Sharing
