@@ -230,6 +230,10 @@ def update_iterm2():
     # launched iTerm2 always has its own "Default" profile selected.
     iterm_prefs["Default Bookmark Guid"] = profile["Guid"]
 
+    # The window theme should be Minimal (5), which styles the window chrome: it is a
+    # global setting, not stored in the profile.
+    iterm_prefs["TabStyleWithAutomaticOption"] = 5
+
     # A running iTerm2 will overwrite defaults changes with its in-memory state.
     # Quit it before writing so the import sticks.
     # pgrep should include ancestors (-a) so iTerm2 is detected from a shell inside it.
