@@ -226,9 +226,9 @@ def update_iterm2():
     else:
         bookmarks.append(profile)
 
-    # Periwinkle should become the default unless the default is another existing profile.
-    if iterm_prefs.get("Default Bookmark Guid") not in [bookmark.get("Guid") for bookmark in bookmarks]:
-        iterm_prefs["Default Bookmark Guid"] = profile["Guid"]
+    # Periwinkle should always become the default: the repo defines the setup, and a
+    # launched iTerm2 always has its own "Default" profile selected.
+    iterm_prefs["Default Bookmark Guid"] = profile["Guid"]
 
     # A running iTerm2 will overwrite defaults changes with its in-memory state.
     # Quit it before writing so the import sticks.
