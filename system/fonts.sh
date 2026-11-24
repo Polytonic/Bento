@@ -134,16 +134,17 @@ if [[ -f "${FONT_DIR}/OperatorMono-Book.otf" ]]; then
     fi
 fi
 
-# Update Terminal.app and iTerm2 Periwinkle Profile Fonts
+# Update Terminal.app Periwinkle Font and Install iTerm2 Periwinkle Profile
 # Terminal.app needs NSKeyedArchiver-encoded NSFont data via plistlib.
 # iTerm2 stores fonts as simple strings ("PostScriptName Size").
 # A running iTerm2 caches preferences in memory and overwrites defaults changes
 # on save, so we quit it before writing and relaunch afterward.
-python3 - "$TERMINAL_FONT" "$TERMINAL_FONT_SIZE" <<'PYTHON'
-import os, sys, plistlib, subprocess, time
+python3 - "$TERMINAL_FONT" "$TERMINAL_FONT_SIZE" "${REPOSITORY_ROOT}/system/themes/Periwinkle.json" <<'PYTHON'
+import json, os, sys, plistlib, subprocess, time
 
 font_name = sys.argv[1]
 font_size = float(sys.argv[2])
+iterm_profile_path = sys.argv[3]
 
 
 def update_terminal_app():
@@ -190,8 +191,21 @@ def update_terminal_app():
 
 
 def update_iterm2():
-    """Update iTerm2 Periwinkle profile font, handling a running instance."""
+    """Install the repo's iTerm2 Periwinkle profile with this machine's font, handling a running instance."""
     iterm_font = f"{font_name} {int(font_size)}"
+
+    try:
+        with open(iterm_profile_path) as profile_file:
+            profile = json.load(profile_file)
+    except (OSError, ValueError):
+        profile = None
+    if not isinstance(profile, dict) or profile.get("Name") != "Periwinkle" or "Guid" not in profile:
+        print(f"iTerm2 Periwinkle profile not readable at {iterm_profile_path}, skipping", file=sys.stderr)
+        return
+
+    # The repo file may carry another machine's font, so this machine's font should always win.
+    profile["Normal Font"] = iterm_font
+    profile["Non Ascii Font"] = iterm_font
 
     result = subprocess.run(
         ["defaults", "export", "com.googlecode.iterm2", "-"],
@@ -204,14 +218,17 @@ def update_iterm2():
     iterm_prefs = plistlib.loads(result.stdout)
     bookmarks = iterm_prefs.get("New Bookmarks", [])
 
-    for bookmark in bookmarks:
+    # The repo profile should replace an existing Periwinkle entry in place, or be added.
+    for index, bookmark in enumerate(bookmarks):
         if bookmark.get("Name") == "Periwinkle":
-            bookmark["Normal Font"] = iterm_font
-            bookmark["Non Ascii Font"] = iterm_font
+            bookmarks[index] = profile
             break
     else:
-        print("iTerm2 Periwinkle profile not found, skipping", file=sys.stderr)
-        return
+        bookmarks.append(profile)
+
+    # Periwinkle should become the default unless the default is another existing profile.
+    if iterm_prefs.get("Default Bookmark Guid") not in [bookmark.get("Guid") for bookmark in bookmarks]:
+        iterm_prefs["Default Bookmark Guid"] = profile["Guid"]
 
     # A running iTerm2 will overwrite defaults changes with its in-memory state.
     # Quit it before writing so the import sticks.
