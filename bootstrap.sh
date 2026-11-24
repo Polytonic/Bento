@@ -59,4 +59,5 @@ source "${REPOSITORY_ROOT}/system/finder.sh"
 # Run Setup Scripts
 source "${REPOSITORY_ROOT}/system/homebrew.sh"
 source "${REPOSITORY_ROOT}/system/fonts.sh"
+source "${REPOSITORY_ROOT}/system/iterm.sh"
 source "${REPOSITORY_ROOT}/shell/install.sh"
